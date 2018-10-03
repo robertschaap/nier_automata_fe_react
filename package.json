@@ -68,7 +68,8 @@
       "!**/*.d.ts"
     ],
     "setupFiles": [
-      "<rootDir>/config/polyfills.js"
+      "<rootDir>/config/polyfills.js",
+      "<rootDir>/config/jest/setupTests.ts"
     ],
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.(j|t)s?(x)",
