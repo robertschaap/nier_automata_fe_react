@@ -4,6 +4,7 @@
     "tslint-react",
     "tslint-eslint-rules"
   ],
+  "defaultSeverity": "warn",
   "linterOptions": {
     "exclude": [
       "config/**/*.js",
