@@ -144,7 +144,10 @@ module.exports = {
               {
                 loader: require.resolve('sass-loader'),
                 options: {
-                  sourceMap: true
+                  sourceMap: true,
+                  includePaths: [
+                    path.resolve(paths.appSrc, "styles")
+                  ]
                 },
               },
             ],
