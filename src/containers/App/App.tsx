@@ -1,11 +1,11 @@
 import * as React from 'react';
 
+import ViewportContainer from 'containers/ViewportContainer';
+
 class App extends React.Component {
-  public render() {
+  render() {
     return (
-      <div>
-        Nier Automata Interface
-      </div>
+      <ViewportContainer shouldScale={true} />
     );
   }
 }
