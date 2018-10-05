@@ -1,0 +1,13 @@
+@import "base.scss";
+
+.component {
+  background-color: $bg-main-color;
+  width: $aspect-width;
+  height: $aspect-height;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+}
