@@ -11,3 +11,9 @@
   transform: translate(-50%, -50%);
   transform-origin: center center;
 }
+
+.content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}

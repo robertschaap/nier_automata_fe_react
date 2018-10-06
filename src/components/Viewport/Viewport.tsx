@@ -2,6 +2,13 @@ import * as React from 'react';
 
 import styles from './Viewport.scss';
 
+import Decoration from 'components/Decoration';
+import Header from 'components/Header';
+import InfoPanel from 'components/InfoPanel';
+import Main from 'components/Main';
+import MainPanel from 'components/MainPanel';
+import Navigation from 'components/Navigation';
+
 interface ViewportProps {
   scaleRatio?: number;
 }
@@ -11,7 +18,16 @@ const Viewport = (props: ViewportProps) => {
 
   return (
     <div className={styles.component} style={{ transform: `translate(-50%, -50%) scale(${scaleRatio})` }}>
-      Viewport
+      <div className={styles.content}>
+        <Navigation />
+        <Decoration />
+        <Main>
+          <Header />
+          <MainPanel />
+        </Main>
+        <Decoration />
+        <InfoPanel />
+      </div>
     </div>
   );
 };
