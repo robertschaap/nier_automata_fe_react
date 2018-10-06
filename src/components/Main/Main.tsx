@@ -2,9 +2,17 @@ import * as React from 'react';
 
 import styles from './Main.scss';
 
-const Main = () => {
+interface MainProps {
+  children: React.ReactNode;
+}
+
+const Main = (props: MainProps) => {
+  const { children } = props;
+
   return (
-    <div className={styles.component}>main</div>
+    <div className={styles.component}>
+      {children}
+    </div>
   );
 };
 
