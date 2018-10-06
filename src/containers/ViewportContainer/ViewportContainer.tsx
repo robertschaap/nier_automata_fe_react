@@ -19,6 +19,7 @@ class ViewportContainer extends React.Component<ViewportContainerProps, Viewport
 
   componentDidMount() {
     window.addEventListener('resize', this.calculateMinRatio);
+    window.dispatchEvent(new Event('resize'));
   }
 
   componentWillUnmount() {
