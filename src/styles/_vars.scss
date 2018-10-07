@@ -9,5 +9,14 @@ $color-key-darkest: #4e4c44;
 $aspect-width: 1920px;
 $aspect-height: 1080px;
 
+// text
+$text-color: $color-key-darkest;
+$text-color-light: $color-key-lightest;
+
 // component colours
 $bg-main-color: $color-key-light;
+
+$navitem-color: $color-key-normal;
+$navitem-focus-color: $color-key-darkest;
+
+$decoration-color: $color-key-darkest;
