@@ -1,0 +1,10 @@
+@import "base.scss";
+
+.component {
+  display: inline;
+  font-size: 56px;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 12px;
+  text-shadow: 7px 7px $color-key-normal;
+}
