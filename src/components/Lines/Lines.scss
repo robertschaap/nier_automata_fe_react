@@ -1,5 +1,9 @@
 @import "base.scss";
 
 .fill {
-  fill: $color-key-normal;
+  fill: $lines-color;
+}
+
+.fillDark {
+  fill: $lines-color-dark;
 }
