@@ -34,20 +34,21 @@ class WriteText extends React.Component<WriteTextProps, WriteTextState> {
 
   writeText = (inputString: string) => {
     const { label } = this.props;
-    const { alphabetIndex, labelIndex, letter, output } = this.state;
+    const { alphabetIndex, labelIndex, output } = this.state;
 
-    if (label[labelIndex] !== alphabet[alphabetIndex]) {
-      this.setState({
-        alphabetIndex: alphabetIndex + 1,
-        letter: alphabet[alphabetIndex + 1],
-      },
-      this.handleTimeout,
-      );
-    } else if (labelIndex < inputString.length - 1) {
+    if (label[labelIndex] === alphabet[alphabetIndex]) {
       this.setState({
         alphabetIndex: 0,
         labelIndex: labelIndex + 1,
-        output: output + letter,
+        letter: '',
+        output: output + label[labelIndex],
+      },
+      this.handleTimeout,
+      );
+    } else if (labelIndex <= inputString.length - 1) {
+      this.setState({
+        alphabetIndex: alphabetIndex + 1,
+        letter: alphabet[alphabetIndex + 1],
       },
       this.handleTimeout,
       );
