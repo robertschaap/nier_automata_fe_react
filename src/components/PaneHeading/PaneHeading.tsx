@@ -4,15 +4,22 @@ import styles from './PaneHeading.scss';
 import WriteText from 'components/WriteText';
 
 interface PaneHeadingProps {
+  info?: string;
   label: string;
 }
 
 const PaneHeading = (props: PaneHeadingProps) => {
-  const { label } = props;
+  const { label, info } = props;
+
   return (
-    <h1 className={styles.component}>
-      <WriteText label={label} />
-    </h1>
+    <React.Fragment>
+      <h1 className={styles.component}>
+        <WriteText label={label} />
+      </h1>
+      {info && (
+        <span> - <WriteText label={info} /></span>
+      )}
+    </React.Fragment>
   );
 };
 
