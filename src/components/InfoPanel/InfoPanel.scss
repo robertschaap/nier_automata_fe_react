@@ -1,0 +1,16 @@
+@import "base.scss";
+
+.component {
+
+  height: 103px;
+  padding-left: 51px;
+  padding-right: 61px;
+}
+
+.panel {
+  height: 79px;
+  background-color: $bg-light-color;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 3px 3px $color-key-normal;
+}
