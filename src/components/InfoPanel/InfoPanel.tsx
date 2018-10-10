@@ -9,7 +9,7 @@ interface InfoPanelProps {
 
 const InfoPanel = (props: InfoPanelProps) => {
   return (
-    <div className={styles.component}>
+    <footer className={styles.component}>
       <div className={styles.panel}>
         <Lines isDark={true} />
         <div className={styles.label}>
@@ -17,7 +17,7 @@ const InfoPanel = (props: InfoPanelProps) => {
         </div>
         <div className={styles.buttons}>buttons</div>
       </div>
-    </div>
+    </footer>
   );
 };
 
