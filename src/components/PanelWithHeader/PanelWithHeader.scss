@@ -1,0 +1,17 @@
+@import "base.scss";
+
+.component {
+  margin-top: 51px;
+  background-color: $bg-light-color;
+  width: 535px;
+}
+
+.header {
+  margin: 0;
+  padding-left: 22px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  background-color: $panel-header-bg-color;
+  color: $text-color-light;
+}
