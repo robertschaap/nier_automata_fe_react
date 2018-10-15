@@ -1,0 +1,15 @@
+@import "base.scss";
+
+.component {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.ailment {
+  width: 20px;
+  height: 20px;
+  border: 2px solid $lines-color;
+}
