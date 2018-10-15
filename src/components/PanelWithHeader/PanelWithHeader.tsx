@@ -1,5 +1,4 @@
 import * as React from 'react';
-
 import styles from './PanelWithHeader.scss';
 
 interface PanelWithHeaderProps {
@@ -15,7 +14,7 @@ const PanelWithHeader = (props: PanelWithHeaderProps) => {
       <h3 className={styles.header}>
         {headerLabel}
       </h3>
-      <div>
+      <div className={styles.content}>
         {children}
       </div>
     </section>

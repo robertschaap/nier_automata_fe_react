@@ -4,6 +4,8 @@
   margin-top: 51px;
   background-color: $bg-light-color;
   width: 535px;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
@@ -14,4 +16,12 @@
   align-items: center;
   background-color: $panel-header-bg-color;
   color: $text-color-light;
+}
+
+.content {
+  flex: auto;
+  display: flex;
+  flex-direction: column;
+  padding-left: 22px;
+  padding-right: 20px;
 }
