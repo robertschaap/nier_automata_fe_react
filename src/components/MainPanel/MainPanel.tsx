@@ -1,14 +1,16 @@
 import * as React from 'react';
 import styles from './MainPanel.scss';
 
-import Lines from 'components/Lines';
+import ItemPanel from 'components/ItemPanel';
+import MenuList from 'components/MenuList';
+import StatusPanel from 'components/StatusPanel';
 
 const MainPanel = () => {
   return (
     <div className={styles.component}>
-      <div style={{ marginTop: '51px', width: '58px' }}>
-        <Lines />
-      </div>
+      <MenuList />
+      <ItemPanel />
+      <StatusPanel />
     </div>
   );
 };
