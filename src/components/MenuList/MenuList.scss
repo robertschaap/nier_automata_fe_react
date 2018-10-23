@@ -1,14 +1,16 @@
 @import "base.scss";
 
 .component {
-  width: 505px;
+  width: 563px;
   margin-top: 51px;
-  margin-right: 39px;
+  display: flex;
+  align-items: center;
 }
 
 .container {
   display: flex;
   flex-direction: row;
+  width: 100%;
 }
 
 .list {
