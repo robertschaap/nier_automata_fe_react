@@ -1,0 +1,23 @@
+@import "base.scss";
+
+.component {
+  width: 505px;
+  margin-top: 51px;
+  margin-right: 39px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: auto;
+
+  > div:not(:last-of-type) {
+    margin-bottom: 28px;
+  }
+}
