@@ -6,14 +6,15 @@ import styles from './NavItem.scss';
 interface NavItemProps {
   isActive?: boolean;
   label: string;
+  list?: boolean;
   to: string;
 }
 
 const NavItem = (props: NavItemProps) => {
-  const { label, isActive } = props;
+  const { label, list, isActive } = props;
 
   return (
-    <div className={styles.component}>
+    <div className={cx(styles.component, { [styles.list]: list })}>
       <div className={cx(styles.bar, { [styles.active]: isActive })}>
         <div className={styles.fill} />
         <div className={styles.label}>
