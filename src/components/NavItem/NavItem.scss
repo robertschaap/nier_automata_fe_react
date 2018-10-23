@@ -32,6 +32,10 @@
 
   &.list {
     width: 100%;
+
+    .label {
+      text-transform: none;
+    }
   }
 }
 
