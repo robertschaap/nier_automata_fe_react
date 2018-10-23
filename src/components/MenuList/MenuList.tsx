@@ -12,6 +12,7 @@ const MenuList = () => {
           <Lines />
         </div>
         <ul className={styles.list}>
+          <NavItem label='All Items' to='#' list={true} />
           <NavItem label='Restorative Items' to='#' list={true} />
           <NavItem label='Enhancement Items' to='#' list={true} />
           <NavItem label='Support Items' to='#' list={true} />
