@@ -12,14 +12,14 @@ const PaneHeading = (props: PaneHeadingProps) => {
   const { label, info } = props;
 
   return (
-    <React.Fragment>
+    <div>
       <h1 className={styles.component}>
         <WriteText label={label} />
       </h1>
       {info && (
         <span> - <WriteText label={info} /></span>
       )}
-    </React.Fragment>
+    </div>
   );
 };
 
