@@ -3,4 +3,9 @@
 .component {
   height: 69px;
   padding-left: 7px;
+  display: flex;
+
+  > div:first-child {
+    flex: auto;
+  }
 }
