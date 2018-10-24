@@ -2,6 +2,7 @@ import * as React from 'react';
 import styles from './Header.scss';
 
 import PaneHeading from 'components/PaneHeading';
+import StoragePanel from 'components/StoragePanel';
 
 interface HeaderProps {
   info?: string;
@@ -14,6 +15,7 @@ const Header = (props: HeaderProps) => {
   return (
     <div className={styles.component}>
       <PaneHeading label={label} info={info} />
+      <StoragePanel />
     </div>
   );
 };
