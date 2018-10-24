@@ -9,15 +9,15 @@ import TextJustify from 'components/TextJustify';
 const StatusPanel = () => {
   return (
     <PanelWithHeader headerLabel='Status'>
-      <TextJustify left='2B' right='LV : 98' />
+      <TextJustify left='2B' right='Lv : 76' />
       <Divider />
       <TextJustify left='Funds (G):' right='2,535,364' />
-      <TextJustify left='EXP' right='1234' />
-      <TextJustify left='HP' right='1234' />
-      <TextJustify left='Attack (Light)' right='1234+10' />
-      <TextJustify left='Attack (Heavy)' right='1234+10' />
-      <TextJustify left='Ranged Attack' right='1234+10' />
-      <TextJustify left='Defense' right='1234+10' />
+      <TextJustify left='EXP:' right='626,978' />
+      <TextJustify left='HP:' right='7765 / 7765' />
+      <TextJustify left='Attack (Light):' right='5953 + 1191' />
+      <TextJustify left='Attack (Heavy):' right='6523 + 1305' />
+      <TextJustify left='Ranged Attack:' right='127 + 0' />
+      <TextJustify left='Defense:' right='2920' />
       <AilmentsPanel />
       <Divider />
       <TextCentered label='NO ERROR' />
