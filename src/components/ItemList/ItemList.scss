@@ -4,7 +4,6 @@
   width: 563px;
   margin-top: 51px;
   display: flex;
-  align-items: center;
 }
 
 .container {
@@ -18,6 +17,8 @@
   padding: 0;
   margin: 0;
   flex: auto;
+  background-color: $bg-light-color;
+  overflow-y: scroll;
 
   > div:not(:last-of-type) {
     margin-bottom: 12px;
