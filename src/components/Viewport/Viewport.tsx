@@ -25,8 +25,8 @@ const Viewport = (props: ViewportProps) => {
           <Header label='Weapons' info='Weapon Set 1' />
           <MainPanel />
         </Main>
+        <InfoPanel label='Change equipped weapons' />
         <Decoration />
-        <InfoPanel />
       </div>
     </div>
   );
