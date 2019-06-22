@@ -22,7 +22,7 @@ const Viewport = (props: ViewportProps) => {
         <Navigation />
         <Decoration />
         <Main>
-          <Header />
+          <Header label='Weapons' info='Weapon Set 1' />
           <MainPanel />
         </Main>
         <Decoration />
