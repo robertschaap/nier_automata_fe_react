@@ -22,6 +22,9 @@ const ItemList = () => {
           <NavItem label='Cure Manipulation' to='#' list={true} />
           <NavItem label='Cure All Status' to='#' list={true} />
           <NavItem label='Cure All + Heal All' to='#' list={true} />
+          <NavItem label='Cure All + Heal All' to='#' list={true} />
+          <NavItem label='Cure All + Heal All' to='#' list={true} />
+          <NavItem label='Cure All + Heal All' to='#' list={true} />
         </ul>
       </div>
     </div>
