@@ -3,6 +3,7 @@ import * as React from 'react';
 import { Viewport } from 'components/Viewport';
 
 interface ViewportContainerProps {
+  children: React.ReactNode;
   shouldScale: boolean;
 }
 
@@ -36,10 +37,12 @@ class ViewportContainer extends React.Component<ViewportContainerProps, Viewport
   }
 
   render() {
-    const { shouldScale } = this.props;
+    const { children, shouldScale } = this.props;
 
     return (
-      <Viewport scaleRatio={shouldScale ? this.state.scale : this.scale} />
+      <Viewport scaleRatio={shouldScale ? this.state.scale : this.scale}>
+        {children}
+      </Viewport>
     );
   }
 }
