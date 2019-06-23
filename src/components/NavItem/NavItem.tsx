@@ -6,7 +6,7 @@ import styles from './NavItem.scss';
 
 interface NavItemProps {
   isActive?: boolean;
-  label: string | React.ReactElement<{ label: string }>;
+  label: string | React.ReactNode;
   list?: boolean;
   to: string;
 }
