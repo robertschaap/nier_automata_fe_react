@@ -1,16 +1,16 @@
 import * as React from 'react';
 import styles from './MainPanel.scss';
 
-import ItemList from 'components/ItemList';
-import ItemPanel from 'components/ItemPanel';
-import StatusPanel from 'components/StatusPanel';
+interface MainPanelProps {
+  children: React.ReactNode;
+}
 
-const MainPanel = () => {
+const MainPanel = (props: MainPanelProps) => {
+  const { children } = props;
+
   return (
     <div className={styles.component}>
-      <ItemList />
-      <ItemPanel />
-      <StatusPanel />
+      {children}
     </div>
   );
 };
