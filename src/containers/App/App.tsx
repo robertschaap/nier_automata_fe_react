@@ -10,6 +10,7 @@ import IntelPage from 'pages/IntelPage';
 import ItemsPage from 'pages/ItemsPage';
 import MapPage from 'pages/MapPage';
 import QuestsPage from 'pages/QuestsPage';
+import SkillsPage from 'pages/SkillsPage';
 import WeaponsPage from 'pages/WeaponsPage';
 
 class App extends React.Component {
@@ -23,6 +24,7 @@ class App extends React.Component {
             <Route path={Routes.MAP} component={MapPage} />
             <Route path={Routes.ITEMS} component={ItemsPage} />
             <Route path={Routes.WEAPONS} component={WeaponsPage} />
+            <Route path={Routes.SKILLS} component={SkillsPage} />
             <Route path={Routes.INTEL} component={IntelPage} />
           </Layout>
         </ViewportContainer>
