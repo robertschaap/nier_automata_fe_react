@@ -9,6 +9,7 @@ import ViewportContainer from 'containers/ViewportContainer';
 import ItemsPage from 'pages/ItemsPage';
 import MapPage from 'pages/MapPage';
 import QuestsPage from 'pages/QuestsPage';
+import WeaponsPage from 'pages/WeaponsPage';
 
 class App extends React.Component {
   render() {
@@ -20,6 +21,7 @@ class App extends React.Component {
             <Route path={Routes.QUESTS} component={QuestsPage} />
             <Route path={Routes.MAP} component={MapPage} />
             <Route path={Routes.ITEMS} component={ItemsPage} />
+            <Route path={Routes.WEAPONS} component={WeaponsPage} />
           </Layout>
         </ViewportContainer>
       </BrowserRouter>
