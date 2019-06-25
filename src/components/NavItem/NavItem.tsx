@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import cx from 'classnames';
 import styles from './NavItem.scss';
@@ -12,17 +12,17 @@ interface NavItemProps {
 }
 
 const NavItem = (props: NavItemProps) => {
-  const { label, list, isActive, to } = props;
+  const { label, list, to } = props;
 
   return (
     <div className={cx(styles.component, { [styles.list]: list })}>
-      <Link className={cx(styles.bar, { [styles.active]: isActive })} to={to}>
+      <NavLink className={styles.bar} activeClassName={styles.active} to={to}>
         <div className={styles.fill} />
         <div className={styles.label}>
           <i className={styles.icon} />
           {label}
         </div>
-      </Link>
+      </NavLink>
     </div>
   );
 };
