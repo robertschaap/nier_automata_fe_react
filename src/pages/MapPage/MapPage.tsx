@@ -2,9 +2,9 @@ import * as React from 'react';
 
 import Header from 'components/Header';
 import InfoPanel from 'components/InfoPanel';
-import MenuList from 'components/MenuList';
 import Main from 'components/Main';
 import MainPanel from 'components/MainPanel';
+import MenuList from 'components/MenuList';
 
 const MapPage = () => {
   return (
