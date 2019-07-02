@@ -11,7 +11,7 @@ interface HeaderProps {
 }
 
 const Header = (props: HeaderProps) => {
-  const { label, info, showStoragePanel = true } = props;
+  const { label, info, showStoragePanel = false } = props;
 
   return (
     <div className={styles.component}>
