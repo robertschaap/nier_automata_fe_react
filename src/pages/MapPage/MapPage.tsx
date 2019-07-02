@@ -15,7 +15,7 @@ const MapPage = () => {
           <ItemList />
         </MainPanel>
       </Main>
-      <InfoPanel label='Change equipped weapons' />
+      <InfoPanel label='View the map or perform a quick save' />
     </>
   );
 };
