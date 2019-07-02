@@ -7,15 +7,18 @@ import StoragePanel from 'components/StoragePanel';
 interface HeaderProps {
   info?: string;
   label: string;
+  showStoragePanel?: boolean;
 }
 
 const Header = (props: HeaderProps) => {
-  const { label, info } = props;
+  const { label, info, showStoragePanel = true } = props;
 
   return (
     <div className={styles.component}>
       <PaneHeading label={label} info={info} />
-      <StoragePanel />
+      {showStoragePanel && (
+        <StoragePanel />
+      )}
     </div>
   );
 };
