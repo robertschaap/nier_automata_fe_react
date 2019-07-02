@@ -11,7 +11,7 @@ const SkillsPage = () => {
   return (
     <>
       <Main>
-        <Header label='Skills' />
+        <Header label='Skills' showStoragePanel={true} />
         <MainPanel>
           <MenuList />
           <StatusPanel />
