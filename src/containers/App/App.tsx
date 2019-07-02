@@ -11,6 +11,7 @@ import ItemsPage from 'pages/ItemsPage';
 import MapPage from 'pages/MapPage';
 import QuestsPage from 'pages/QuestsPage';
 import SkillsPage from 'pages/SkillsPage';
+import SystemPage from 'pages/SystemPage';
 import WeaponsPage from 'pages/WeaponsPage';
 
 class App extends React.Component {
@@ -26,6 +27,7 @@ class App extends React.Component {
             <Route path={Routes.WEAPONS} component={WeaponsPage} />
             <Route path={Routes.SKILLS} component={SkillsPage} />
             <Route path={Routes.INTEL} component={IntelPage} />
+            <Route path={Routes.SYSTEM} component={SystemPage} />
           </Layout>
         </ViewportContainer>
       </BrowserRouter>
