@@ -10,7 +10,7 @@ const MapPage = () => {
   return (
     <>
       <Main>
-        <Header label='Map'/>
+        <Header label='Map' />
         <MainPanel>
           <ItemList />
         </MainPanel>
