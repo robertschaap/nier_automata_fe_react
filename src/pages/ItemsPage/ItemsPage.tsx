@@ -19,7 +19,7 @@ const ItemsPage = () => {
           <StatusPanel />
         </MainPanel>
       </Main>
-      <InfoPanel label='Change equipped weapons' />
+      <InfoPanel label='View or use items in your inventory' />
     </>
   );
 };
