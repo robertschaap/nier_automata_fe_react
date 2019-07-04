@@ -17,7 +17,7 @@ const QuestsPage = () => {
           <StatusPanel />
         </MainPanel>
       </Main>
-      <InfoPanel label='Change equipped weapons' />
+      <InfoPanel label='Confirm quest details and objectives' />
     </>
   );
 };
