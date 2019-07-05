@@ -5,6 +5,10 @@
   margin-top: 51px;
   display: flex;
   align-items: center;
+
+  &.isTopAligned {
+    align-items: start;
+  }
 }
 
 .container {

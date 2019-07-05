@@ -1,13 +1,23 @@
 import * as React from 'react';
+
+import cx from 'classnames';
 import styles from './MenuList.scss';
 
 import Lines from 'components/Lines';
 import NavItem from 'components/NavItem';
 import WriteText from 'components/WriteText';
 
-const MenuList = () => {
+interface MenuListProps {
+  isTopAligned?: boolean;
+}
+
+const MenuList = (props: MenuListProps) => {
+  const { isTopAligned } = props;
+
   return (
-    <div className={styles.component}>
+    <div className={cx(styles.component, {
+      [styles.isTopAligned]: isTopAligned,
+    })}>
       <div className={styles.container}>
         <div style={{ width: '66px' }}>
           <Lines />
