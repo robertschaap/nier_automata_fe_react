@@ -40,7 +40,7 @@ class ViewportContainer extends React.Component<ViewportContainerProps, Viewport
     const { children, shouldScale } = this.props;
 
     return (
-      <Viewport scaleRatio={shouldScale ? this.state.scale : this.scale}>
+      <Viewport scaleRatio={shouldScale ? this.state.scale : this.scale} shouldScale={shouldScale}>
         {children}
       </Viewport>
     );
