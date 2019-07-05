@@ -9,7 +9,7 @@ const MenuList = () => {
   return (
     <div className={styles.component}>
       <div className={styles.container}>
-        <div style={{ width: '58px' }}>
+        <div style={{ width: '66px' }}>
           <Lines />
         </div>
         <ul className={styles.list}>
