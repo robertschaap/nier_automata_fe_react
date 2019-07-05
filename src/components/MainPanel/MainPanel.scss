@@ -1,9 +1,8 @@
 @import "base.scss";
 
 .component {
-  flex: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  max-height: 646px;
+  height: 576px;
 }
