@@ -4,15 +4,15 @@ import cx from 'classnames';
 import styles from './MenuList.scss';
 
 import Lines from 'components/Lines';
-import NavItem from 'components/NavItem';
-import WriteText from 'components/WriteText';
+import MenuItem, { MenuItemProps } from 'components/MenuItem';
 
 interface MenuListProps {
   isTopAligned?: boolean;
+  options?: MenuItemProps[];
 }
 
 const MenuList = (props: MenuListProps) => {
-  const { isTopAligned } = props;
+  const { isTopAligned, options = [] } = props;
 
   return (
     <div className={cx(styles.component, {
@@ -23,13 +23,14 @@ const MenuList = (props: MenuListProps) => {
           <Lines />
         </div>
         <ul className={styles.list}>
-          <NavItem label={<WriteText label='All Items' />} to='#' list={true} />
-          <NavItem label={<WriteText label='Restorative Items' />} to='#' list={true} />
-          <NavItem label={<WriteText label='Enhancement Items' />} to='#' list={true} />
-          <NavItem label={<WriteText label='Support Items' />} to='#' list={true} />
-          <NavItem label={<WriteText label='Materials' />} to='#' list={true} />
-          <NavItem label={<WriteText label='Key Items' />} to='#' list={true} />
-          <NavItem label={<WriteText label='Caught Items' />} to='#' list={true} />
+          {options.map((option, index) => (
+            <MenuItem
+              key={index}
+              icon={option.icon}
+              label={option.label}
+              list={true}
+              to={option.to || '#'} />
+          ))}
         </ul>
       </div>
     </div>
