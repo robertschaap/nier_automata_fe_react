@@ -7,13 +7,23 @@ import MainPanel from 'components/MainPanel';
 import MenuList from 'components/MenuList';
 import StatusPanel from 'components/StatusPanel';
 
+const options = [
+  { label: 'Archives' },
+  { label: 'Unit Data' },
+  { label: 'Tutorials' },
+  { label: 'Weapon Stories' },
+  { label: 'Picture Books' },
+  { label: 'Fishing Encyclopedia' },
+  { label: 'Novel' },
+];
+
 const IntelPage = () => {
   return (
     <>
       <Main>
         <Header label='Intel' />
         <MainPanel>
-          <MenuList />
+          <MenuList options={options} />
           <StatusPanel />
         </MainPanel>
       </Main>
