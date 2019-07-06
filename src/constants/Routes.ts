@@ -1,5 +1,4 @@
-const Routes = {
-  INDEX: '/',
+const NavigationRoutes = {
   INTEL: '/intel',
   ITEMS: '/items',
   MAP: '/map',
@@ -7,6 +6,13 @@ const Routes = {
   SKILLS: '/skills',
   SYSTEM: '/system',
   WEAPONS: '/weapons',
+};
+
+const Routes = {
+  INDEX: '/',
+  SAVE: '/save',
+
+  ...NavigationRoutes,
 };
 
 export default Routes;
