@@ -7,15 +7,14 @@ export interface MenuItemProps {
   icon?: string; // TODO wire
   isActive?: boolean;
   label: string | React.ReactNode;
-  list?: boolean;
   to?: string; // TODO wire
 }
 
 const MenuItem = (props: MenuItemProps) => {
-  const { isActive, label, list } = props;
+  const { isActive, label } = props;
 
   return (
-    <div className={cx(styles.component, { [styles.list]: list })}>
+    <div className={styles.component}>
       <div className={cx(styles.bar, {
         [styles.active]: isActive,
       })}>

@@ -1,7 +1,7 @@
 @import "base.scss";
 
 .component {
-  width: 216px;
+  width: 100%;
   margin-right: 40px;
 
   &:hover {
@@ -31,22 +31,12 @@
     }
   }
 
-  &.list {
-    width: 100%;
+  .label {
+    text-transform: none;
+  }
 
-    &:hover {
-      .fill {
-        transition: width 100ms ease-out;
-      }
-    }
-
-    .label {
-      text-transform: none;
-    }
-
-    .fill {
-      transition: width 300ms ease-out;
-    }
+  .fill {
+    transition: width 300ms ease-out;
   }
 }
 
