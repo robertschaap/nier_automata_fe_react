@@ -7,13 +7,19 @@ import MainPanel from 'components/MainPanel';
 import MenuList from 'components/MenuList';
 import StatusPanel from 'components/StatusPanel';
 
+const options = [
+  { label: 'Active Quests' },
+  { label: 'All Quests' },
+  { label: 'Cleared Quests' },
+];
+
 const QuestsPage = () => {
   return (
     <>
       <Main>
         <Header label='Quests' />
         <MainPanel>
-          <MenuList />
+          <MenuList options={options} />
           <StatusPanel />
         </MainPanel>
       </Main>
