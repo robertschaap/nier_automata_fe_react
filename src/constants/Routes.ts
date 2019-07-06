@@ -10,7 +10,7 @@ const NavigationRoutes = {
 
 const Routes = {
   INDEX: '/',
-  MAP:  '/mapview',
+  MAPVIEW:  '/mapview',
   SAVE: '/save',
 
   ...NavigationRoutes,
