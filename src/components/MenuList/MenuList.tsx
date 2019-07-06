@@ -28,7 +28,7 @@ const MenuList = (props: MenuListProps) => {
               key={index}
               icon={option.icon}
               label={option.label}
-              to={option.to || '#'} />
+              to={option.to} />
           ))}
         </ul>
       </div>
