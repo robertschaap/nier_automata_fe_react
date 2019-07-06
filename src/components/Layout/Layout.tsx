@@ -13,11 +13,12 @@ const Layout = (props: LayoutProps) => {
   const { children } = props;
 
   return (
-    <div className={styles.content}>
+    <div className={styles.component}>
       <Navigation />
       <Decoration />
       {children}
       <Decoration />
+      <div className={styles.spacer} />
     </div>
   );
 };
