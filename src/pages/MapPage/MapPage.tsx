@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import Routes from 'constants/Routes';
+
 import Header from 'components/Header';
 import InfoPanel from 'components/InfoPanel';
 import Main from 'components/Main';
@@ -8,7 +10,7 @@ import Map from 'components/Map';
 import MenuList from 'components/MenuList';
 
 const options = [
-  { label: 'Quick Save' },
+  { label: 'Quick Save', to: Routes.SAVE }, // TODO setup route
   { label: 'Map mode' },
   { label: 'Map Icons' },
 ];
