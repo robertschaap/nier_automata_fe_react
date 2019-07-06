@@ -3,11 +3,12 @@ import * as React from 'react';
 import cx from 'classnames';
 import styles from './MenuItem.scss';
 
-interface MenuItemProps {
+export interface MenuItemProps {
+  icon?: string; // TODO wire
   isActive?: boolean;
   label: string | React.ReactNode;
   list?: boolean;
-  to: string;
+  to?: string; // TODO wire
 }
 
 const MenuItem = (props: MenuItemProps) => {

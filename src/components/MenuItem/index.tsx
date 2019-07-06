@@ -1,3 +1,4 @@
-import MenuItem from './MenuItem';
+import MenuItem, { MenuItemProps } from './MenuItem';
 
 export default MenuItem;
+export { MenuItemProps };
