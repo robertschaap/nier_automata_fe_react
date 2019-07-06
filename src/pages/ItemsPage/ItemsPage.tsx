@@ -8,13 +8,23 @@ import MainPanel from 'components/MainPanel';
 import MenuList from 'components/MenuList';
 import StatusPanel from 'components/StatusPanel';
 
+const options = [
+  { label: 'All Items' },
+  { label: 'Restorative Items' },
+  { label: 'Enhancement Items' },
+  { label: 'Support Items' },
+  { label: 'Materials' },
+  { label: 'Key Items' },
+  { label: 'Caught Items' },
+];
+
 const ItemsPage = () => {
   return (
     <>
       <Main>
-        <Header label='Weapons' info='Weapon Set 1' />
+        <Header label='Items' />
         <MainPanel>
-          <MenuList />
+          <MenuList options={options} />
           <ItemPanel />
           <StatusPanel />
         </MainPanel>
