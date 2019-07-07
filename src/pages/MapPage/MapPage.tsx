@@ -11,7 +11,7 @@ import MenuList from 'components/MenuList';
 
 const options = [
   { label: 'Quick Save', to: Routes.SAVE }, // TODO setup route
-  { label: 'Map mode', to: Routes.MAP }, // TODO setup route
+  { label: 'Map mode', to: Routes.MAPVIEW }, // TODO setup route
   { label: 'Map Icons' },
 ];
 
