@@ -16,7 +16,7 @@ const options = [
   { label: 'Support Items' },
   { label: 'Materials' },
   { label: 'Key Items' },
-  { label: 'Caught Items' },
+  { label: 'Caught Fish' },
 ];
 
 const ItemsPage = () => {
