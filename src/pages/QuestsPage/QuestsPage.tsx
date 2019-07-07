@@ -2,6 +2,7 @@ import * as React from 'react';
 
 import Header from 'components/Header';
 import InfoPanel from 'components/InfoPanel';
+import Layout from 'components/Layout';
 import Main from 'components/Main';
 import MainPanel from 'components/MainPanel';
 import MenuList from 'components/MenuList';
@@ -15,7 +16,7 @@ const options = [
 
 const QuestsPage = () => {
   return (
-    <>
+    <Layout>
       <Main>
         <Header label='Quests' />
         <MainPanel>
@@ -24,7 +25,7 @@ const QuestsPage = () => {
         </MainPanel>
       </Main>
       <InfoPanel label='Confirm quest details and objectives' />
-    </>
+    </Layout>
   );
 };
 

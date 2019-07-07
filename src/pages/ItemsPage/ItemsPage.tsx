@@ -3,6 +3,7 @@ import * as React from 'react';
 import Header from 'components/Header';
 import InfoPanel from 'components/InfoPanel';
 import ItemPanel from 'components/ItemPanel';
+import Layout from 'components/Layout';
 import Main from 'components/Main';
 import MainPanel from 'components/MainPanel';
 import MenuList from 'components/MenuList';
@@ -20,7 +21,7 @@ const options = [
 
 const ItemsPage = () => {
   return (
-    <>
+    <Layout>
       <Main>
         <Header label='Items' />
         <MainPanel>
@@ -30,7 +31,7 @@ const ItemsPage = () => {
         </MainPanel>
       </Main>
       <InfoPanel label='View or use items in your inventory' />
-    </>
+    </Layout>
   );
 };
 

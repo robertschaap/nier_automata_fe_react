@@ -2,6 +2,7 @@ import * as React from 'react';
 
 import Header from 'components/Header';
 import InfoPanel from 'components/InfoPanel';
+import Layout from 'components/Layout';
 import Main from 'components/Main';
 import MainPanel from 'components/MainPanel';
 import MenuList from 'components/MenuList';
@@ -20,7 +21,7 @@ const options = [
 
 const SystemPage = () => {
   return (
-    <>
+    <Layout>
       <Main>
         <Header label='System' />
         <MainPanel>
@@ -29,7 +30,7 @@ const SystemPage = () => {
         </MainPanel>
       </Main>
       <InfoPanel label='Change equipped weapons' />
-    </>
+    </Layout>
   );
 };
 

@@ -3,7 +3,6 @@ import * as React from 'react';
 import Routes from 'constants/Routes';
 import { BrowserRouter, Route } from 'react-router-dom';
 
-import Layout from 'components/Layout';
 import ViewportContainer from 'containers/ViewportContainer';
 
 import IntelPage from 'pages/IntelPage';
@@ -19,16 +18,14 @@ class App extends React.Component {
     return (
       <BrowserRouter>
         <ViewportContainer shouldScale={true}>
-          <Layout>
-            <Route path={Routes.INDEX} exact={true} component={MapPage} />
-            <Route path={Routes.QUESTS} component={QuestsPage} />
-            <Route path={Routes.MAP} component={MapPage} />
-            <Route path={Routes.ITEMS} component={ItemsPage} />
-            <Route path={Routes.WEAPONS} component={WeaponsPage} />
-            <Route path={Routes.SKILLS} component={SkillsPage} />
-            <Route path={Routes.INTEL} component={IntelPage} />
-            <Route path={Routes.SYSTEM} component={SystemPage} />
-          </Layout>
+          <Route path={Routes.INDEX} exact={true} component={MapPage} />
+          <Route path={Routes.QUESTS} component={QuestsPage} />
+          <Route path={Routes.MAP} component={MapPage} />
+          <Route path={Routes.ITEMS} component={ItemsPage} />
+          <Route path={Routes.WEAPONS} component={WeaponsPage} />
+          <Route path={Routes.SKILLS} component={SkillsPage} />
+          <Route path={Routes.INTEL} component={IntelPage} />
+          <Route path={Routes.SYSTEM} component={SystemPage} />
         </ViewportContainer>
       </BrowserRouter>
     );

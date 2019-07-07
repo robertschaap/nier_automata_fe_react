@@ -4,6 +4,7 @@ import Routes from 'constants/Routes';
 
 import Header from 'components/Header';
 import InfoPanel from 'components/InfoPanel';
+import Layout from 'components/Layout';
 import Main from 'components/Main';
 import MainPanel from 'components/MainPanel';
 import Map from 'components/Map';
@@ -17,7 +18,7 @@ const options = [
 
 const MapPage = () => {
   return (
-    <>
+    <Layout>
       <Main>
         <Header label='Map' />
         <MainPanel>
@@ -28,7 +29,7 @@ const MapPage = () => {
         </MainPanel>
       </Main>
       <InfoPanel label='View the map or perform a quick save' />
-    </>
+    </Layout>
   );
 };
 
