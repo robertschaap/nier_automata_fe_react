@@ -19,8 +19,8 @@ class App extends React.Component {
       <BrowserRouter>
         <ViewportContainer shouldScale={true}>
           <Route path={Routes.INDEX} exact={true} component={MapPage} />
-          <Route path={Routes.QUESTS} component={QuestsPage} />
           <Route path={Routes.MAP} component={MapPage} />
+          <Route path={Routes.QUESTS} component={QuestsPage} />
           <Route path={Routes.ITEMS} component={ItemsPage} />
           <Route path={Routes.WEAPONS} component={WeaponsPage} />
           <Route path={Routes.SKILLS} component={SkillsPage} />
