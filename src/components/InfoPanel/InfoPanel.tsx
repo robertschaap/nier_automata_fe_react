@@ -15,7 +15,7 @@ const InfoPanel = (props: InfoPanelProps) => {
         <div className={styles.label}>
           {props.label}
         </div>
-        <div className={styles.buttons}>Select Confirm</div>
+        <div className={styles.buttons}>Select Confirm Back</div>
       </div>
     </footer>
   );
