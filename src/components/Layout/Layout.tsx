@@ -7,14 +7,17 @@ import Navigation from 'components/Navigation';
 
 interface LayoutProps {
   children: React.ReactNode;
+  showNavigation?: boolean;
 }
 
 const Layout = (props: LayoutProps) => {
-  const { children } = props;
+  const { children, showNavigation = true } = props;
 
   return (
     <div className={styles.component}>
-      <Navigation />
+      {showNavigation && (
+        <Navigation />
+      )}
       <Decoration />
       {children}
       <Decoration />
