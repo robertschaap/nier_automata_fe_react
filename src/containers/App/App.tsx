@@ -5,6 +5,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 
 import ViewportContainer from 'containers/ViewportContainer';
 
+// Main Pages
 import IntelPage from 'pages/IntelPage';
 import ItemsPage from 'pages/ItemsPage';
 import MapPage from 'pages/MapPage';
@@ -12,6 +13,9 @@ import QuestsPage from 'pages/QuestsPage';
 import SkillsPage from 'pages/SkillsPage';
 import SystemPage from 'pages/SystemPage';
 import WeaponsPage from 'pages/WeaponsPage';
+
+// Sub Pages
+import SavePage from 'pages/SavePage';
 
 class App extends React.Component {
   render() {
@@ -26,6 +30,8 @@ class App extends React.Component {
           <Route path={Routes.SKILLS} component={SkillsPage} />
           <Route path={Routes.INTEL} component={IntelPage} />
           <Route path={Routes.SYSTEM} component={SystemPage} />
+
+          <Route path={Routes.SAVE} component={SavePage} />
         </ViewportContainer>
       </BrowserRouter>
     );
