@@ -1,9 +1,21 @@
 import * as React from 'react';
 import styles from './StoragePanel.scss';
 
-const StoragePanel = () => {
+interface StoragePanelProps {
+  storageCapacity?: number;
+  storageUsed?: number;
+}
+
+const StoragePanel = (props: StoragePanelProps) => {
+  const {
+    storageCapacity = 128,
+    storageUsed = 128,
+  } = props;
+
   return (
-    <div className={styles.component}>Storage Used: 123/128</div>
+    <div className={styles.component}>
+      Storage Used: {storageUsed}/{storageCapacity}
+    </div>
   );
 };
 
