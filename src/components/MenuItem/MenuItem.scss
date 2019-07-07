@@ -101,6 +101,11 @@
   background-color: $text-color;
 }
 
+.completion {
+  margin-left: auto;
+  margin-right: 8px;
+}
+
 .active {
   background-color: $text-color;
   color: $text-color-light;

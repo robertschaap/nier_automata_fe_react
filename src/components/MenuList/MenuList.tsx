@@ -26,6 +26,7 @@ const MenuList = (props: MenuListProps) => {
           {options.map((option, index) => (
             <MenuItem
               key={index}
+              completion={option.completion}
               icon={option.icon}
               label={option.label}
               to={option.to} />
