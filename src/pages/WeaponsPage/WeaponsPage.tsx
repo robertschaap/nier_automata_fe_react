@@ -9,7 +9,7 @@ import MenuList from 'components/MenuList';
 import StatusPanel from 'components/StatusPanel';
 
 const options = [
-  { label: 'Weapons' },
+  { label: 'Weapons', completion: '87%' },
   { label: 'Weapons Set 1' },
   { label: 'Weapons Set 2' },
 ];
