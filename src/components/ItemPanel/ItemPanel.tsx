@@ -7,7 +7,7 @@ import PanelWithHeader from 'components/PanelWithHeader';
 import TextJustify from 'components/TextJustify';
 
 // TODO: check bottom padding on last text element
-const StatusPanel: React.FunctionComponent = () => {
+const ItemPanel: React.FunctionComponent = () => {
   return (
     <PanelWithHeader headerLabel='Small Recovery'>
       <ItemImage />
@@ -19,4 +19,4 @@ const StatusPanel: React.FunctionComponent = () => {
   );
 };
 
-export default StatusPanel;
+export default ItemPanel;
