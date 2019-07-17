@@ -8,13 +8,18 @@ import MainPanel from 'components/MainPanel';
 import MenuList from 'components/MenuList';
 import StatusPanel from 'components/StatusPanel';
 
+const options = [
+  { label: 'Pod Programs', completion: '88%' },
+  { label: 'Plug-In Chips' },
+];
+
 const SkillsPage = () => {
   return (
     <Layout>
       <Main>
         <Header label='Skills' />
         <MainPanel>
-          <MenuList />
+          <MenuList options={options} />
           <StatusPanel />
         </MainPanel>
       </Main>
