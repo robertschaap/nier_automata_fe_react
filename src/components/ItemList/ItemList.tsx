@@ -5,7 +5,7 @@ import Lines from 'components/Lines';
 import NavItem from 'components/NavItem';
 
 // TODO: this is very similar to <MenuList />, refactor this once the APIs are clearer
-const ItemList = () => {
+const ItemList: React.FunctionComponent = () => {
   return (
     <div className={styles.component}>
       <div className={styles.container}>
