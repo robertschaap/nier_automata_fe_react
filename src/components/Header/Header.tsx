@@ -10,7 +10,7 @@ interface HeaderProps {
   showStoragePanel?: boolean;
 }
 
-const Header = (props: HeaderProps) => {
+const Header: React.FunctionComponent<HeaderProps> = (props: HeaderProps) => {
   const { label, info, showStoragePanel = false } = props;
 
   return (
