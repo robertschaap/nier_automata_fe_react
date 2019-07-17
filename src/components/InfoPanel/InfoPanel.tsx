@@ -7,7 +7,7 @@ interface InfoPanelProps {
   label: string;
 }
 
-const InfoPanel = (props: InfoPanelProps) => {
+const InfoPanel: React.FunctionComponent<InfoPanelProps> = (props: InfoPanelProps) => {
   return (
     <footer className={styles.component}>
       <div className={styles.panel}>
