@@ -6,7 +6,7 @@ interface MainProps {
   children: React.ReactNode;
 }
 
-const Main = (props: MainProps) => {
+const Main: React.FunctionComponent<MainProps> = (props: MainProps) => {
   const { children } = props;
 
   return (
