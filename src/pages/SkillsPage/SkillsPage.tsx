@@ -12,7 +12,7 @@ const SkillsPage = () => {
   return (
     <Layout>
       <Main>
-        <Header label='Skills' showStoragePanel={true} />
+        <Header label='Skills' />
         <MainPanel>
           <MenuList />
           <StatusPanel />
