@@ -5,7 +5,7 @@ interface LinesProps {
   isDark?: boolean;
 }
 
-const Lines = (props: LinesProps) => {
+const Lines: React.FunctionComponent<LinesProps> = (props: LinesProps) => {
   const { isDark } = props;
 
   const fillColor =
