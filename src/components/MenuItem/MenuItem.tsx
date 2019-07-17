@@ -12,7 +12,7 @@ export interface MenuItemProps {
   to?: string;
 }
 
-const MenuItem = (props: MenuItemProps) => {
+const MenuItem: React.FunctionComponent<MenuItemProps> = (props: MenuItemProps) => {
   const {
     isActive,
     completion,
