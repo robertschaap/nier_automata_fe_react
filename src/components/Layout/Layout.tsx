@@ -10,7 +10,7 @@ interface LayoutProps {
   showNavigation?: boolean;
 }
 
-const Layout = (props: LayoutProps) => {
+const Layout: React.FunctionComponent<LayoutProps> = (props: LayoutProps) => {
   const { children, showNavigation = true } = props;
 
   return (
