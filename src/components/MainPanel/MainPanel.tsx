@@ -5,7 +5,7 @@ interface MainPanelProps {
   children: React.ReactNode;
 }
 
-const MainPanel = (props: MainPanelProps) => {
+const MainPanel: React.FunctionComponent<MainPanelProps> = (props: MainPanelProps) => {
   const { children } = props;
 
   return (
