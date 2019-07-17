@@ -11,7 +11,7 @@ interface MenuListProps {
   options?: MenuItemProps[];
 }
 
-const MenuList = (props: MenuListProps) => {
+const MenuList: React.FunctionComponent<MenuListProps> = (props: MenuListProps) => {
   const { isTopAligned, options = [] } = props;
 
   return (
