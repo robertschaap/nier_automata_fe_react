@@ -16,7 +16,6 @@ const options = [
   { label: 'Network' },
   { label: 'Play Records' },
   { label: 'Return to Title Screen' },
-  { label: 'Exit' },
 ];
 
 const SystemPage = () => {
