@@ -6,7 +6,7 @@ import Routes from 'constants/Routes';
 import Lines from 'components/Lines';
 import NavItem from 'components/NavItem';
 
-const Navigation = () => {
+const Navigation: React.FunctionComponent = () => {
   return (
     <nav className={styles.component}>
       <div style={{ marginTop: '6px', height: '51px', width: '58px' }}>
