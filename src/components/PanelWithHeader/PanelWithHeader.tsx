@@ -6,7 +6,7 @@ interface PanelWithHeaderProps {
   children: React.ReactNode;
 }
 
-const PanelWithHeader = (props: PanelWithHeaderProps) => {
+const PanelWithHeader: React.FunctionComponent<PanelWithHeaderProps> = (props: PanelWithHeaderProps) => {
   const { headerLabel, children } = props;
 
   return (
