@@ -8,7 +8,7 @@ interface PaneHeadingProps {
   label: string;
 }
 
-const PaneHeading = (props: PaneHeadingProps) => {
+const PaneHeading: React.FunctionComponent<PaneHeadingProps> = (props: PaneHeadingProps) => {
   const { label, info } = props;
 
   return (
