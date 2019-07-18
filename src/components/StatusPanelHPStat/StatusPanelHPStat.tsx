@@ -7,7 +7,7 @@ interface StatusPanelHPStatProps {
   hpMaximum: number;
 }
 
-const StatusPanelHPStat = (props: StatusPanelHPStatProps) => {
+const StatusPanelHPStat: React.FunctionComponent<StatusPanelHPStatProps> = (props: StatusPanelHPStatProps) => {
   const {
     hpCurrent,
     hpMaximum,
