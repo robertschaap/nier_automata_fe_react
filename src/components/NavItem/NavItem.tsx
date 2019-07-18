@@ -11,7 +11,7 @@ interface NavItemProps {
   to: string;
 }
 
-const NavItem = (props: NavItemProps) => {
+const NavItem: React.FunctionComponent<NavItemProps> = (props: NavItemProps) => {
   const { label, list, to } = props;
 
   return (
