@@ -7,7 +7,7 @@ import StatusPanelHPStat from 'components/StatusPanelHPStat';
 import TextCentered from 'components/TextCentered';
 import TextJustify from 'components/TextJustify';
 
-const StatusPanel = () => {
+const StatusPanel: React.FunctionComponent = () => {
   return (
     <PanelWithHeader headerLabel='Status'>
       <TextJustify left='2B' right='Lv : 76' />
