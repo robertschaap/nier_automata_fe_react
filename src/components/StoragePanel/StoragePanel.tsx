@@ -6,7 +6,7 @@ interface StoragePanelProps {
   storageUsed?: number;
 }
 
-const StoragePanel = (props: StoragePanelProps) => {
+const StoragePanel: React.FunctionComponent<StoragePanelProps> = (props: StoragePanelProps) => {
   const {
     storageCapacity = 128,
     storageUsed = 128,
