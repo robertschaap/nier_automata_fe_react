@@ -9,7 +9,7 @@ interface ViewportProps {
   children: React.ReactNode;
 }
 
-const Viewport = (props: ViewportProps) => {
+const Viewport: React.FunctionComponent<ViewportProps> = (props: ViewportProps) => {
   const {
     children,
     scaleRatio,
