@@ -5,7 +5,7 @@ interface TextCenteredProps {
   label: string;
 }
 
-const TextCentered = (props: TextCenteredProps) => {
+const TextCentered: React.FunctionComponent<TextCenteredProps> = (props: TextCenteredProps) => {
   const { label } = props;
 
   return (
