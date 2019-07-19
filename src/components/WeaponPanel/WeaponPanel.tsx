@@ -6,7 +6,7 @@ import PanelWithHeader from 'components/PanelWithHeader';
 import TextJustify from 'components/TextJustify';
 import WeaponImage from 'components/WeaponImage';
 
-const WeaponPanel = () => {
+const WeaponPanel: React.FunctionComponent = () => {
   return (
     <PanelWithHeader headerLabel='Bare Fists Lv: 3'>
       <WeaponImage />
