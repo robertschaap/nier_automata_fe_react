@@ -7,7 +7,7 @@ interface TextJustifyProps {
   right?: string;
 }
 
-const TextJustify = (props: TextJustifyProps) => {
+const TextJustify: React.FunctionComponent<TextJustifyProps> = (props: TextJustifyProps) => {
   const { left, right } = props;
 
   return (
