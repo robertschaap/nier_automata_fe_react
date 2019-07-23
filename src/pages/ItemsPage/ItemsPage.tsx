@@ -19,7 +19,7 @@ const options = [
   { label: 'Caught Fish' },
 ];
 
-const ItemsPage = () => {
+const ItemsPage: React.FunctionComponent = () => {
   return (
     <Layout>
       <Main>
