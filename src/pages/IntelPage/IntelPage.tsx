@@ -18,7 +18,7 @@ const options = [
   { label: 'Novel' },
 ];
 
-const IntelPage = () => {
+const IntelPage: React.FunctionComponent = () => {
   return (
     <Layout>
       <Main>
