@@ -16,7 +16,7 @@ const options = [
   { label: 'Map Icons' },
 ];
 
-const MapPage = () => {
+const MapPage: React.FunctionComponent = () => {
   return (
     <Layout>
       <Main>
