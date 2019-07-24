@@ -13,7 +13,7 @@ const options = [
   { label: 'Plug-In Chips' },
 ];
 
-const SkillsPage = () => {
+const SkillsPage: React.FunctionComponent = () => {
   return (
     <Layout>
       <Main>
