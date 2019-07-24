@@ -14,7 +14,7 @@ const options = [
   { label: 'Cleared Quests' },
 ];
 
-const QuestsPage = () => {
+const QuestsPage: React.FunctionComponent = () => {
   return (
     <Layout>
       <Main>
