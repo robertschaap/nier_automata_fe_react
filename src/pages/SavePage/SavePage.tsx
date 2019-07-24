@@ -5,7 +5,7 @@ import InfoPanel from 'components/InfoPanel';
 import Layout from 'components/Layout';
 import Main from 'components/Main';
 
-const SavePage = () => {
+const SavePage: React.FunctionComponent = () => {
   return (
     <Layout showNavigation={false}>
       <Main>
