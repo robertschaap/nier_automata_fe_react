@@ -18,7 +18,7 @@ const options = [
   { label: 'Return to Title Screen' },
 ];
 
-const SystemPage = () => {
+const SystemPage: React.FunctionComponent = () => {
   return (
     <Layout>
       <Main>
