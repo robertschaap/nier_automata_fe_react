@@ -14,7 +14,7 @@ const options = [
   { label: 'Weapons Set 2' },
 ];
 
-const WeaponsPage = () => {
+const WeaponsPage: React.FunctionComponent = () => {
   return (
     <Layout>
       <Main>
