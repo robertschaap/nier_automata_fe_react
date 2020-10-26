@@ -1,0 +1,58 @@
+{
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "airbnb-base",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+  "rules": {
+    "@typescript-eslint/array-type": ["error", {
+      "default": "array",
+      "readonly": "array"
+    }],
+    "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "arrow-body-style": "off",
+    "camelcase": "off",
+    "import/extensions": "off",
+    "import/no-extraneous-dependencies": "off",
+    "import/order": ["error", {
+      "newlines-between": "always",
+      "alphabetize": {
+        "order": "asc",
+        "caseInsensitive": true
+      }
+    }],
+    "import/prefer-default-export": "off",
+    "indent": ["error", 2, {
+      "SwitchCase": 1
+    }],
+    "max-len": "off",
+    "no-confusing-arrow": "off",
+    "no-param-reassign": ["error", {
+      "props": true,
+      "ignorePropertyModificationsFor": ["draft"]
+    }],
+    "no-unused-expressions": "off",
+    "object-curly-newline": "off",
+    "spaced-comment": ["error", "always", {
+      "line": {
+        "markers": ["/"]
+      }
+    }],
+
+    // Workaround for potential conflict with legacy config
+    "no-use-before-define": "off"
+  }
+}
