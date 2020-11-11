@@ -1,7 +1,12 @@
 import React from 'react';
 
+import { HorizontalRule } from 'components/HorizontalRule';
+
 export const Footer: React.FC = () => {
   return (
-    <footer>Footer</footer>
+    <footer>
+      <div>footer</div>
+      <HorizontalRule />
+    </footer>
   );
 };
