@@ -12,7 +12,7 @@ export const Header: React.FC<HeaderProps> = ({ title }) => {
   return (
     <header>
       <S.NavItems>
-        <S.NavItem>Map</S.NavItem>
+        <S.NavItem isActive>Map</S.NavItem>
         <S.NavItem>Quests</S.NavItem>
         <S.NavItem>Items</S.NavItem>
         <S.NavItem>Weapons</S.NavItem>
