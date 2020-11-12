@@ -5,6 +5,11 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  body {
+    font-family: 'Lato', sans-serif;
+    font-size: 22px;
+  }
+
   *,
   *:before,
   *:after {
