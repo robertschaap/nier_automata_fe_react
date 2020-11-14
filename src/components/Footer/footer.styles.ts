@@ -14,8 +14,6 @@ export const Label = styled.div`
 `;
 
 export const Decoration = styled.div`
-  background-color: hotpink;
-  width: 25px;
   height: 100%;
   margin-right: 35px;
 `;
