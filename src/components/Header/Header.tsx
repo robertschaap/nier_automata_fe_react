@@ -36,6 +36,7 @@ interface NavItemProps {
   isActive?: boolean;
   children: string;
 }
+
 const NavItem: React.FC<NavItemProps> = ({ isActive, children }) => {
   return (
     <S.NavItemBase isActive={isActive}>

@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 export const Navigation = styled.nav`
   display: flex;
   margin: 0 50px;
+  margin-top: 35px;
 `;
 
 export const Decoration = styled.div`
