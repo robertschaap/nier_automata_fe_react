@@ -14,17 +14,34 @@ export const Header: React.FC<HeaderProps> = ({ title }) => {
       <S.Navigation>
         <S.Decoration />
         <S.NavItems>
-          <S.NavItem isActive>Map</S.NavItem>
-          <S.NavItem>Quests</S.NavItem>
-          <S.NavItem>Items</S.NavItem>
-          <S.NavItem>Weapons</S.NavItem>
-          <S.NavItem>Skills</S.NavItem>
-          <S.NavItem>Intel</S.NavItem>
-          <S.NavItem>System</S.NavItem>
+          <NavItem isActive>Map</NavItem>
+          <NavItem>Quests</NavItem>
+          <NavItem>Items</NavItem>
+          <NavItem>Weapons</NavItem>
+          <NavItem>Skills</NavItem>
+          <NavItem>Intel</NavItem>
+          <NavItem>System</NavItem>
         </S.NavItems>
       </S.Navigation>
       <HorizontalRule />
       <S.H1>{title}</S.H1>
     </header>
+  );
+};
+
+interface NavItemProps {
+  isActive?: boolean;
+  children: string;
+}
+const NavItem: React.FC<NavItemProps> = ({ isActive, children }) => {
+  return (
+    <S.NavItemBase isActive={isActive}>
+      <S.NavItem>
+        <S.NavItemFillBar />
+        <S.NavItemLabel>
+          <S.NavItemIcon />{children}
+        </S.NavItemLabel>
+      </S.NavItem>
+    </S.NavItemBase>
   );
 };
