@@ -2,6 +2,7 @@ import React from 'react';
 
 import * as S from './header.styles';
 
+import { Decoration } from 'components/Decoration';
 import { HorizontalRule } from 'components/HorizontalRule';
 
 interface HeaderProps {
@@ -12,7 +13,9 @@ export const Header: React.FC<HeaderProps> = ({ title }) => {
   return (
     <header>
       <S.Navigation>
-        <S.Decoration />
+        <S.Decoration>
+          <Decoration />
+        </S.Decoration>
         <S.NavItems>
           <NavItem isActive>Map</NavItem>
           <NavItem>Quests</NavItem>

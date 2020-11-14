@@ -6,8 +6,6 @@ export const Navigation = styled.nav`
 `;
 
 export const Decoration = styled.div`
-  background-color: hotpink;
-  width: 25px;
   height: 50px;
   margin-right: 35px;
 `;
