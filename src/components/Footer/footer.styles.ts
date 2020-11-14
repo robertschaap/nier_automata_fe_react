@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+export const InfoPanelWrapper = styled.div`
+  height: 100px;
+`;
+
 export const InfoPanel = styled.div`
   display: flex;
   align-items: center;

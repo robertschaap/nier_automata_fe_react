@@ -12,17 +12,19 @@ interface FooterProps {
 export const Footer: React.FC<FooterProps> = ({ text }) => {
   return (
     <footer>
-      <S.InfoPanel>
-        <S.Decoration>
-          <Decoration isDark />
-        </S.Decoration>
-        <S.Label>
-          {text}
-        </S.Label>
-        <S.Buttons>
-          Select Contirm Back
-        </S.Buttons>
-      </S.InfoPanel>
+      <S.InfoPanelWrapper>
+        <S.InfoPanel>
+          <S.Decoration>
+            <Decoration isDark />
+          </S.Decoration>
+          <S.Label>
+            {text}
+          </S.Label>
+          <S.Buttons>
+            Select Contirm Back
+          </S.Buttons>
+        </S.InfoPanel>
+      </S.InfoPanelWrapper>
       <HorizontalRule />
     </footer>
   );
