@@ -4,6 +4,7 @@
   "plugins": [],
   "alias": {
     "components": "./src/components",
+    "constants": "./src/constants",
     "pages": "./src/pages"
   }
 }
