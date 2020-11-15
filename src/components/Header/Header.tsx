@@ -10,24 +10,31 @@ interface HeaderProps {
 }
 
 export const Header: React.FC<HeaderProps> = ({ title }) => {
+  const showNavigation = true;
+  const showTitle = true;
+
   return (
     <header>
-      <S.Navigation>
-        <S.Decoration>
-          <Decoration />
-        </S.Decoration>
-        <S.NavItems>
-          <NavItem isActive>Map</NavItem>
-          <NavItem>Quests</NavItem>
-          <NavItem>Items</NavItem>
-          <NavItem>Weapons</NavItem>
-          <NavItem>Skills</NavItem>
-          <NavItem>Intel</NavItem>
-          <NavItem>System</NavItem>
-        </S.NavItems>
-      </S.Navigation>
+      {showNavigation && (
+        <S.Navigation>
+          <S.Decoration>
+            <Decoration />
+          </S.Decoration>
+          <S.NavItems>
+            <NavItem isActive>Map</NavItem>
+            <NavItem>Quests</NavItem>
+            <NavItem>Items</NavItem>
+            <NavItem>Weapons</NavItem>
+            <NavItem>Skills</NavItem>
+            <NavItem>Intel</NavItem>
+            <NavItem>System</NavItem>
+          </S.NavItems>
+        </S.Navigation>
+      )}
       <HorizontalRule />
-      <S.H1>{title}</S.H1>
+      {showTitle && (
+        <S.H1>{title}</S.H1>
+      )}
     </header>
   );
 };
