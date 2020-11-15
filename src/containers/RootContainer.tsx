@@ -14,6 +14,14 @@ export const RootContainer: React.FC = () => {
     <Router history={createBrowserHistory()}>
       <ThemeProviderContainer>
         <ViewPort>
+          <Route exact path="/" component={MapPage} />
+          <Route path="/map" component={MapPage} />
+          <Route path="/quests" component={undefined} />
+          <Route path="/items" component={undefined} />
+          <Route path="/weapons" component={undefined} />
+          <Route path="/skills" component={undefined} />
+          <Route path="/intel" component={undefined} />
+          <Route path="/system" component={undefined} />
           <Route component={MapPage} />
         </ViewPort>
       </ThemeProviderContainer>
