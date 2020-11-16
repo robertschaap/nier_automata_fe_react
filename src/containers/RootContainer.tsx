@@ -9,6 +9,7 @@ import { ThemeProviderContainer } from './ThemeProviderContainer';
 import { ViewPort } from 'components/ViewPort';
 import { baseRoutes } from 'constants/routes';
 import { IntelPage } from 'pages/IntelPage';
+import { ItemsPage } from 'pages/ItemsPage';
 import { MapPage } from 'pages/MapPage';
 
 export const RootContainer: React.FC = () => {
@@ -19,7 +20,7 @@ export const RootContainer: React.FC = () => {
           <Route exact path="/" component={MapPage} />
           <Route path={baseRoutes.MAP_PAGE} component={MapPage} />
           <Route path={baseRoutes.QUESTS_PAGE} component={undefined} />
-          <Route path={baseRoutes.ITEMS_PAGE} component={undefined} />
+          <Route path={baseRoutes.ITEMS_PAGE} component={ItemsPage} />
           <Route path={baseRoutes.WEAPONS_PAGE} component={undefined} />
           <Route path={baseRoutes.SKILLS_PAGE} component={undefined} />
           <Route path={baseRoutes.INTEL_PAGE} component={IntelPage} />
