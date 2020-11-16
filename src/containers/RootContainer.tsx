@@ -12,6 +12,7 @@ import { IntelPage } from 'pages/IntelPage';
 import { ItemsPage } from 'pages/ItemsPage';
 import { MapPage } from 'pages/MapPage';
 import { QuestsPage } from 'pages/QuestsPage';
+import { SystemPage } from 'pages/System';
 import { WeaponsPage } from 'pages/WeaponsPage';
 
 export const RootContainer: React.FC = () => {
@@ -26,7 +27,7 @@ export const RootContainer: React.FC = () => {
           <Route path={baseRoutes.WEAPONS_PAGE} component={WeaponsPage} />
           <Route path={baseRoutes.SKILLS_PAGE} component={undefined} />
           <Route path={baseRoutes.INTEL_PAGE} component={IntelPage} />
-          <Route path={baseRoutes.SYSTEM_PAGE} component={undefined} />
+          <Route path={baseRoutes.SYSTEM_PAGE} component={SystemPage} />
         </ViewPort>
       </ThemeProviderContainer>
     </Router>
