@@ -11,6 +11,7 @@ import { baseRoutes } from 'constants/routes';
 import { IntelPage } from 'pages/IntelPage';
 import { ItemsPage } from 'pages/ItemsPage';
 import { MapPage } from 'pages/MapPage';
+import { QuestsPage } from 'pages/QuestsPage';
 
 export const RootContainer: React.FC = () => {
   return (
@@ -19,7 +20,7 @@ export const RootContainer: React.FC = () => {
         <ViewPort>
           <Route exact path="/" component={MapPage} />
           <Route path={baseRoutes.MAP_PAGE} component={MapPage} />
-          <Route path={baseRoutes.QUESTS_PAGE} component={undefined} />
+          <Route path={baseRoutes.QUESTS_PAGE} component={QuestsPage} />
           <Route path={baseRoutes.ITEMS_PAGE} component={ItemsPage} />
           <Route path={baseRoutes.WEAPONS_PAGE} component={undefined} />
           <Route path={baseRoutes.SKILLS_PAGE} component={undefined} />
