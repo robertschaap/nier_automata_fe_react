@@ -1,8 +1,9 @@
 import '../styles/normalize.css';
 
-import { createBrowserHistory } from 'history';
 import React from 'react';
 import { Route, Router } from 'react-router-dom';
+
+import { history } from '../utils/history';
 
 import { ThemeProviderContainer } from './ThemeProviderContainer';
 
@@ -18,7 +19,7 @@ import { WeaponsPage } from 'pages/WeaponsPage';
 
 export const RootContainer: React.FC = () => {
   return (
-    <Router history={createBrowserHistory()}>
+    <Router history={history}>
       <ThemeProviderContainer>
         <ViewPort>
           <Route exact path="/" component={MapPage} />
