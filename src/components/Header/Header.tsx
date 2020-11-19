@@ -7,16 +7,16 @@ import { Decoration } from 'components/Decoration';
 import { HorizontalRule } from 'components/HorizontalRule';
 import { BaseRoutesType, baseRoutes } from 'constants/routes';
 
+// TODO: flags here are just temp, probably context+hook this since nested pages will need access
 interface HeaderProps {
+  showNavigation?: boolean;
+  showTitle?: boolean;
   title: string;
 }
 
-export const Header: React.FC<HeaderProps> = ({ title }) => {
+export const Header: React.FC<HeaderProps> = ({ showNavigation = true, showTitle = true, title }) => {
   const [activeRoute, setActiveRoute] = useState<BaseRoutesType | null>(null);
   const history = useHistory();
-
-  const showNavigation = true;
-  const showTitle = true;
 
   const handleRouteChange = (to: BaseRoutesType) => {
     history.push(to);
