@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 import * as S from './header.styles';
 
@@ -11,8 +12,15 @@ interface HeaderProps {
 }
 
 export const Header: React.FC<HeaderProps> = ({ title }) => {
+  const [activeRoute, setActiveRoute] = useState<BaseRoutesType | null>(null);
+  const history = useHistory();
+
   const showNavigation = true;
   const showTitle = true;
+
+  const handleRouteChange = (to: BaseRoutesType) => {
+    history.push(to);
+  };
 
   return (
     <header>
@@ -22,13 +30,13 @@ export const Header: React.FC<HeaderProps> = ({ title }) => {
             <Decoration />
           </S.Decoration>
           <S.NavItems>
-            <NavItem to={baseRoutes.MAP_PAGE}>Map</NavItem>
-            <NavItem to={baseRoutes.QUESTS_PAGE}>Quests</NavItem>
-            <NavItem to={baseRoutes.ITEMS_PAGE}>Items</NavItem>
-            <NavItem to={baseRoutes.WEAPONS_PAGE}>Weapons</NavItem>
-            <NavItem to={baseRoutes.SKILLS_PAGE}>Skills</NavItem>
-            <NavItem to={baseRoutes.INTEL_PAGE}>Intel</NavItem>
-            <NavItem to={baseRoutes.SYSTEM_PAGE}>System</NavItem>
+            <NavItem isActive={activeRoute === baseRoutes.MAP_PAGE} onSetActiveRoute={setActiveRoute} onRouteChange={handleRouteChange} to={baseRoutes.MAP_PAGE}>Map</NavItem>
+            <NavItem isActive={activeRoute === baseRoutes.QUESTS_PAGE} onSetActiveRoute={setActiveRoute} onRouteChange={handleRouteChange} to={baseRoutes.QUESTS_PAGE}>Quests</NavItem>
+            <NavItem isActive={activeRoute === baseRoutes.ITEMS_PAGE} onSetActiveRoute={setActiveRoute} onRouteChange={handleRouteChange} to={baseRoutes.ITEMS_PAGE}>Items</NavItem>
+            <NavItem isActive={activeRoute === baseRoutes.WEAPONS_PAGE} onSetActiveRoute={setActiveRoute} onRouteChange={handleRouteChange} to={baseRoutes.WEAPONS_PAGE}>Weapons</NavItem>
+            <NavItem isActive={activeRoute === baseRoutes.SKILLS_PAGE} onSetActiveRoute={setActiveRoute} onRouteChange={handleRouteChange} to={baseRoutes.SKILLS_PAGE}>Skills</NavItem>
+            <NavItem isActive={activeRoute === baseRoutes.INTEL_PAGE} onSetActiveRoute={setActiveRoute} onRouteChange={handleRouteChange} to={baseRoutes.INTEL_PAGE}>Intel</NavItem>
+            <NavItem isActive={activeRoute === baseRoutes.SYSTEM_PAGE} onSetActiveRoute={setActiveRoute} onRouteChange={handleRouteChange} to={baseRoutes.SYSTEM_PAGE}>System</NavItem>
           </S.NavItems>
         </S.Navigation>
       )}
@@ -41,16 +49,18 @@ export const Header: React.FC<HeaderProps> = ({ title }) => {
 };
 
 interface NavItemProps {
-  isActive?: boolean;
   children: string;
+  isActive?: boolean;
+  onRouteChange(to: BaseRoutesType): void;
+  onSetActiveRoute(to: BaseRoutesType | null): void;
   to: BaseRoutesType;
 }
 
-const NavItem: React.FC<NavItemProps> = ({ isActive, children, to }) => {
+const NavItem: React.FC<NavItemProps> = ({ children, isActive, onRouteChange, onSetActiveRoute, to }) => {
   if (isActive) {
     return (
       <S.NavItemBase isActive>
-        <S.NavItemActive>
+        <S.NavItemActive onClick={() => onSetActiveRoute(null)}>
           <S.NavItemLabel>
             <S.NavItemIcon />{children}
           </S.NavItemLabel>
@@ -61,7 +71,11 @@ const NavItem: React.FC<NavItemProps> = ({ isActive, children, to }) => {
 
   return (
     <S.NavItemBase>
-      <S.NavItem to={to}>
+      <S.NavItem
+        to={to}
+        onClick={() => onSetActiveRoute(to)}
+        onMouseOver={() => onRouteChange(to)}
+        onFocus={() => onRouteChange(to)}>
         <S.NavItemBackground />
         <S.NavItemFillBar />
         <S.NavItemLabel>
