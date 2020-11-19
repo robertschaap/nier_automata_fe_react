@@ -35,11 +35,11 @@ export const NavItemBase = styled.li<{ isActive?: boolean }>`
 // visible when loading.
 const slideDown = keyframes`
   from {
-    top: -6px;
+    opacity: 1;
   }
 
   to {
-    top: 0px;
+    opacity: 0;
   }
 `;
 
@@ -58,7 +58,8 @@ export const NavItemActive = styled.div`
     pointer-events: none;
     animation: 100ms ease-out ${slideDown};
     z-index: 0;
-
+    top: -6px;
+    opacity: 0;
   }
 `;
 
