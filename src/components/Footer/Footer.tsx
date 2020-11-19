@@ -21,7 +21,7 @@ export const Footer: React.FC<FooterProps> = ({ text }) => {
             {text}
           </S.Label>
           <S.Buttons>
-            Select Contirm Back
+            WASD-Select K-Confirm L-Back
           </S.Buttons>
         </S.InfoPanel>
       </S.InfoPanelWrapper>
