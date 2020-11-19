@@ -11,6 +11,7 @@ export const InfoPanel = styled.div`
   height: 80px;
   background-color: ${({ theme }) => theme.color.lightest};
   box-shadow: 3px 3px ${({ theme }) => theme.color.normal};
+  letter-spacing: 2px;
 `;
 
 export const Label = styled.div`
