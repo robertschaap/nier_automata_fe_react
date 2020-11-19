@@ -64,6 +64,7 @@ export const NavItemActive = styled.div`
 `;
 
 export const NavItemLabel = styled.div`
+  letter-spacing: 6px;
   position: absolute;
   z-index: 1;
   height: 100%;
@@ -152,6 +153,10 @@ export const NavItem = styled(Link)`
 
 export const H1 = styled.h1`
   text-transform: uppercase;
+  letter-spacing: 16px;
+  font-size: 50px;
+  font-weight: 400;
   margin: 0;
   padding: 0 50px;
+  text-shadow: 6px 6px ${({ theme }) => theme.color.normal};
 `;
