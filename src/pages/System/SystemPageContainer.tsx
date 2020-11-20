@@ -8,7 +8,7 @@ export const SystemPageContainer: React.FC = () => {
     <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
       <Header title="System" showNavigation={false} />
       <div>SystemPage</div>
-      <Footer text="Load game, save game, or change system settings" />
+      <Footer text="Load game, save game, or change system settings." />
     </div>
   );
 };
