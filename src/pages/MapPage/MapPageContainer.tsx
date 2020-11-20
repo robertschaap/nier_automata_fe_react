@@ -12,7 +12,7 @@ export const MapPageContainer: React.FC = () => {
     <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
       <Header title="Map" />
       <MapPage />
-      <Footer text="View the map or perform a quick save" />
+      <Footer text="View the map or perform a quick-save." />
     </div>
   );
 };
