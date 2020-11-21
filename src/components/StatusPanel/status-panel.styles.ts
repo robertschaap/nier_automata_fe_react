@@ -28,3 +28,13 @@ export const Hr = styled.hr`
   border: none;
   background-color: ${({ theme }) => theme.color.normal};
 `;
+
+export const Ailments = styled(Item)`
+  padding: 16px 8px;
+`;
+
+export const Ailment = styled.div`
+  width: 20px;
+  height: 20px;
+  border: 2px solid ${({ theme }) => theme.color.normal};
+`;

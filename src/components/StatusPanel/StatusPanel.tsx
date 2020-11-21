@@ -17,7 +17,12 @@ export const StatusPanel: React.FC = () => {
         <S.Item><span>Attack (Heavy):</span><span>6,523 + 1,305</span></S.Item>
         <S.Item><span>Ranged Attack:</span><span>172 + 0</span></S.Item>
         <S.Item><span>Defense:</span><span>2,920</span></S.Item>
-        <S.Item>Ailments</S.Item>
+        <S.Ailments>
+          {/* TODO: add actual ailments */}
+          {Array(11).fill(0).map((_, index) => (
+            <S.Ailment key={index} />
+          ))}
+        </S.Ailments>
         <S.Hr />
         <S.Item>No Error</S.Item>
       </S.Items>
