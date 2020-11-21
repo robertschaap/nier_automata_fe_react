@@ -7,6 +7,16 @@ import { Decoration } from 'components/Decoration';
 import { HorizontalRule } from 'components/HorizontalRule';
 import { BaseRoutesType, baseRoutes } from 'constants/routes';
 
+const navItems = [
+  { to: baseRoutes.MAP_PAGE, label: 'Map' },
+  { to: baseRoutes.QUESTS_PAGE, label: 'Quests' },
+  { to: baseRoutes.ITEMS_PAGE, label: 'Items' },
+  { to: baseRoutes.WEAPONS_PAGE, label: 'Weapons' },
+  { to: baseRoutes.SKILLS_PAGE, label: 'Skills' },
+  { to: baseRoutes.INTEL_PAGE, label: 'Intel' },
+  { to: baseRoutes.SYSTEM_PAGE, label: 'System' },
+];
+
 // TODO: flags here are just temp, probably context+hook this since nested pages will need access
 interface HeaderProps {
   showNavigation?: boolean;
@@ -30,13 +40,16 @@ export const Header: React.FC<HeaderProps> = ({ showNavigation = true, showTitle
             <Decoration />
           </S.Decoration>
           <S.NavItems>
-            <NavItem isActive={activeRoute === baseRoutes.MAP_PAGE} onSetActiveRoute={setActiveRoute} onRouteChange={handleRouteChange} to={baseRoutes.MAP_PAGE}>Map</NavItem>
-            <NavItem isActive={activeRoute === baseRoutes.QUESTS_PAGE} onSetActiveRoute={setActiveRoute} onRouteChange={handleRouteChange} to={baseRoutes.QUESTS_PAGE}>Quests</NavItem>
-            <NavItem isActive={activeRoute === baseRoutes.ITEMS_PAGE} onSetActiveRoute={setActiveRoute} onRouteChange={handleRouteChange} to={baseRoutes.ITEMS_PAGE}>Items</NavItem>
-            <NavItem isActive={activeRoute === baseRoutes.WEAPONS_PAGE} onSetActiveRoute={setActiveRoute} onRouteChange={handleRouteChange} to={baseRoutes.WEAPONS_PAGE}>Weapons</NavItem>
-            <NavItem isActive={activeRoute === baseRoutes.SKILLS_PAGE} onSetActiveRoute={setActiveRoute} onRouteChange={handleRouteChange} to={baseRoutes.SKILLS_PAGE}>Skills</NavItem>
-            <NavItem isActive={activeRoute === baseRoutes.INTEL_PAGE} onSetActiveRoute={setActiveRoute} onRouteChange={handleRouteChange} to={baseRoutes.INTEL_PAGE}>Intel</NavItem>
-            <NavItem isActive={activeRoute === baseRoutes.SYSTEM_PAGE} onSetActiveRoute={setActiveRoute} onRouteChange={handleRouteChange} to={baseRoutes.SYSTEM_PAGE}>System</NavItem>
+            {navItems.map(({ to, label }) => (
+              <NavItem
+                key={to}
+                isActive={activeRoute === to}
+                onSetActiveRoute={setActiveRoute}
+                onRouteChange={handleRouteChange}
+                to={to}>
+                {label}
+              </NavItem>
+            ))}
           </S.NavItems>
         </S.Navigation>
       )}
