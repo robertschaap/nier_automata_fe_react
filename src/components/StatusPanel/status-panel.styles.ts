@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const StatusPanelBase = styled.div`
+  display: flex;
+  flex-direction: column;
   height: 100%;
   background-color: ${({ theme }) => theme.color.lightest};
   letter-spacing: 2px;
@@ -13,6 +15,8 @@ export const Header = styled.div`
 `;
 
 export const Items = styled.div`
+  display: flex;
+  flex-direction: column;
   padding: 0 22px;
 `;
 
@@ -37,4 +41,13 @@ export const Ailment = styled.div`
   width: 20px;
   height: 20px;
   border: 2px solid ${({ theme }) => theme.color.normal};
+`;
+
+export const Error = styled.div`
+  flex: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 16px;
 `;

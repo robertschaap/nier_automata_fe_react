@@ -24,8 +24,8 @@ export const StatusPanel: React.FC = () => {
           ))}
         </S.Ailments>
         <S.Hr />
-        <S.Item>No Error</S.Item>
       </S.Items>
+      <S.Error>No Error</S.Error>
     </S.StatusPanelBase>
   );
 };
