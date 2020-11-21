@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
 import * as S from './header.styles';
@@ -28,9 +28,9 @@ export const Header: React.FC<HeaderProps> = ({ showNavigation = true, showTitle
   const [activeRoute, setActiveRoute] = useState<BaseRoutesType | null>(null);
   const history = useHistory();
 
-  const handleRouteChange = (to: BaseRoutesType) => {
+  const onRouteChange = useCallback((to: BaseRoutesType) => () => {
     history.push(to);
-  };
+  }, []);
 
   return (
     <header>
@@ -45,7 +45,7 @@ export const Header: React.FC<HeaderProps> = ({ showNavigation = true, showTitle
                 key={to}
                 isActive={activeRoute === to}
                 onSetActiveRoute={setActiveRoute}
-                onRouteChange={handleRouteChange}
+                onRouteChange={onRouteChange(to)}
                 to={to}>
                 {label}
               </NavItem>
@@ -64,7 +64,7 @@ export const Header: React.FC<HeaderProps> = ({ showNavigation = true, showTitle
 interface NavItemProps {
   children: string;
   isActive?: boolean;
-  onRouteChange(to: BaseRoutesType): void;
+  onRouteChange(): void;
   onSetActiveRoute(to: BaseRoutesType | null): void;
   to: BaseRoutesType;
 }
@@ -87,8 +87,8 @@ const NavItem: React.FC<NavItemProps> = ({ children, isActive, onRouteChange, on
       <S.NavItem
         to={to}
         onClick={() => onSetActiveRoute(to)}
-        onMouseOver={() => onRouteChange(to)}
-        onFocus={() => onRouteChange(to)}>
+        onMouseOver={onRouteChange}
+        onFocus={onRouteChange}>
         <S.NavItemBackground />
         <S.NavItemFillBar />
         <S.NavItemLabel>
