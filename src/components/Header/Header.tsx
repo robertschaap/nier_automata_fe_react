@@ -32,6 +32,12 @@ export const Header: React.FC<HeaderProps> = ({ showNavigation = true, showTitle
     history.push(to);
   }, []);
 
+  const onSetActiveRoute = (route: BaseRoutesType) => () => {
+    activeRoute === route
+      ? setActiveRoute(null)
+      : setActiveRoute(route);
+  };
+
   return (
     <header>
       {showNavigation && (
@@ -44,7 +50,7 @@ export const Header: React.FC<HeaderProps> = ({ showNavigation = true, showTitle
               <NavItem
                 key={to}
                 isActive={activeRoute === to}
-                onSetActiveRoute={setActiveRoute}
+                onSetActiveRoute={onSetActiveRoute(to)}
                 onRouteChange={onRouteChange(to)}
                 to={to}>
                 {label}
@@ -65,7 +71,7 @@ interface NavItemProps {
   children: string;
   isActive?: boolean;
   onRouteChange(): void;
-  onSetActiveRoute(to: BaseRoutesType | null): void;
+  onSetActiveRoute(): void;
   to: BaseRoutesType;
 }
 
@@ -73,7 +79,7 @@ const NavItem: React.FC<NavItemProps> = ({ children, isActive, onRouteChange, on
   if (isActive) {
     return (
       <S.NavItemBase isActive>
-        <S.NavItemActive onClick={() => onSetActiveRoute(null)}>
+        <S.NavItemActive onClick={onSetActiveRoute}>
           <S.NavItemLabel>
             <S.NavItemIcon />{children}
           </S.NavItemLabel>
@@ -86,7 +92,7 @@ const NavItem: React.FC<NavItemProps> = ({ children, isActive, onRouteChange, on
     <S.NavItemBase>
       <S.NavItem
         to={to}
-        onClick={() => onSetActiveRoute(to)}
+        onClick={onSetActiveRoute}
         onMouseOver={onRouteChange}
         onFocus={onRouteChange}>
         <S.NavItemBackground />
