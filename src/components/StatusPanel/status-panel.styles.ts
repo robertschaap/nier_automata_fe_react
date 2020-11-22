@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-export const StatusPanelBase = styled.div`
+export const StatusPanelBase = styled.section`
   display: flex;
   flex-direction: column;
-  height: 100%;
+  width: 535px;
   background-color: ${({ theme }) => theme.color.lightest};
   letter-spacing: 2px;
 `;
