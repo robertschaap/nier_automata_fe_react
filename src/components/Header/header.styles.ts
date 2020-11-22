@@ -2,6 +2,8 @@ import styled, { keyframes } from 'styled-components';
 
 import { Link } from 'components/Link';
 
+const itemHeight = '48px';
+
 export const Navigation = styled.nav`
   display: flex;
   margin: 0 50px;
@@ -9,7 +11,7 @@ export const Navigation = styled.nav`
 `;
 
 export const Decoration = styled.div`
-  height: 50px;
+  height: ${itemHeight};
   margin-right: 35px;
 `;
 
@@ -25,7 +27,7 @@ export const NavItems = styled.ul`
 
 export const NavItemBase = styled.li<{ isActive?: boolean }>`
   width: 215px;
-  height: ${({ isActive }) => isActive ? 70 : 50}px;
+  height: ${({ isActive }) => isActive ? '70px' : itemHeight};
   transition: height 100ms ease-out;
   background-color: ${({ theme }) => theme.color.darkest};
   color: ${({ theme }) => theme.color.lightest};
@@ -44,10 +46,9 @@ const slideDown = keyframes`
 `;
 
 export const NavItemActive = styled.div`
-  height: 50px;
+  height: ${itemHeight};
   text-transform: uppercase;
   position: relative;
-  outline: none;
 
   &:before {
     content: "";
@@ -75,8 +76,8 @@ export const NavItemLabel = styled.div`
 `;
 
 export const NavItemIcon = styled.i`
-  width: 25px;
-  height: 25px;
+  width: 23px;
+  height: 23px;
   display: inline-block;
   background-color: currentColor;
   margin: 0 8px;
@@ -87,7 +88,6 @@ export const NavItemBackground = styled.div`
   z-index: 1;
   width: 100%;
   height: 100%;
-  transition: width 100ms ease-out;
   background-color: ${({ theme }) => theme.color.normal};
 `;
 
@@ -105,7 +105,7 @@ export const NavItemFillBar = styled.div`
 // do the top/bottom transition
 export const NavItem = styled(Link)`
   display: block;
-  height: 50px;
+  height: ${itemHeight};
   text-transform: uppercase;
   position: relative;
   outline: none;
