@@ -1,7 +1,13 @@
 import styled from 'styled-components';
 
-export const Main = styled.main`
-  display: flex;
+interface MainProps {
+  spacing?: 'space-between';
+}
+
+export const Main = styled.main<MainProps>`
   flex: auto;
+  display: flex;
   margin: 88px 50px 58px;
+
+  ${({ spacing }) => spacing === 'space-between' ? 'justify-content: space-between;' : ''};
 `;
