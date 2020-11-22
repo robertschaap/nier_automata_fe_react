@@ -14,21 +14,23 @@ interface MenuListProps {
 
 export const MenuList: React.FC<MenuListProps> = ({ items }) => {
   return (
-    <S.MenuListBase>
-      <S.Decoration>
-        <Decoration />
-      </S.Decoration>
-      <S.MenuList>
-        {items.map(({ icon, info, label }, index) => (
-          <MenuListItem
-            key={index}
-            icon={icon}
-            info={info}
-            label={label}>
-          </MenuListItem>
-        ))}
-      </S.MenuList>
-    </S.MenuListBase>
+    <section>
+      <S.MenuListBase>
+        <S.Decoration>
+          <Decoration />
+        </S.Decoration>
+        <S.MenuList>
+          {items.map(({ icon, info, label }, index) => (
+            <MenuListItem
+              key={index}
+              icon={icon}
+              info={info}
+              label={label}>
+            </MenuListItem>
+          ))}
+        </S.MenuList>
+      </S.MenuListBase>
+    </section>
   );
 };
 

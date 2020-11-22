@@ -14,9 +14,7 @@ const items = [
 export const QuestsPage: React.FC = () => {
   return (
     <S.Main>
-      <section>
-        <MenuList items={items} />
-      </section>
+      <MenuList items={items} />
       <section></section>
       <section>
         <StatusPanel />
