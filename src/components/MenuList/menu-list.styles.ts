@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
-export const MenuListBase = styled.div`
+export const MenuListBase = styled.section`
+  width: 573px;
+`;
+
+export const MenuListWrapper = styled.div`
   display: flex;
 `;
 

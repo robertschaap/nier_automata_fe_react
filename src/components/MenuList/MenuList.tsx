@@ -14,8 +14,8 @@ interface MenuListProps {
 
 export const MenuList: React.FC<MenuListProps> = ({ items }) => {
   return (
-    <section>
-      <S.MenuListBase>
+    <S.MenuListBase>
+      <S.MenuListWrapper>
         <S.Decoration>
           <Decoration />
         </S.Decoration>
@@ -29,8 +29,8 @@ export const MenuList: React.FC<MenuListProps> = ({ items }) => {
             </MenuListItem>
           ))}
         </S.MenuList>
-      </S.MenuListBase>
-    </section>
+      </S.MenuListWrapper>
+    </S.MenuListBase>
   );
 };
 
