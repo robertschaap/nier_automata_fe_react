@@ -28,8 +28,8 @@ export const Header: React.FC<HeaderProps> = ({ showNavigation = true, showTitle
   const [activeRoute, setActiveRoute] = useState<BaseRoutesType | null>(null);
   const history = useHistory();
 
-  const onRouteChange = useCallback((to: BaseRoutesType) => () => {
-    history.push(to);
+  const onRouteChange = useCallback((route: BaseRoutesType) => () => {
+    activeRoute !== route && history.push(route);
   }, []);
 
   const onSetActiveRoute = (route: BaseRoutesType) => () => {
