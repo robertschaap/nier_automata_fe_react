@@ -2,21 +2,20 @@ import React from 'react';
 
 import * as S from './quests-page.styles';
 
+import { MenuList } from 'components/MenuList';
 import { StatusPanel } from 'components/StatusPanel';
+
+const items = [
+  { label: 'Active Quests' },
+  { label: 'All Quests' },
+  { label: 'Cleared Quests', info: '85%' },
+];
 
 export const QuestsPage: React.FC = () => {
   return (
     <S.Main>
       <section>
-        <ul>
-          <li>Save</li>
-          <li>Load</li>
-          <li>Settings</li>
-          <li>Controls</li>
-          <li>Network</li>
-          <li>Play Records</li>
-          <li>Return to Title Screen</li>
-        </ul>
+        <MenuList items={items} />
       </section>
       <section></section>
       <section>
