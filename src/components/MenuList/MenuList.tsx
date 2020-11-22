@@ -4,20 +4,22 @@ import * as S from './menu-list.styles';
 
 import { Decoration } from 'components/Decoration';
 
-export const MenuList: React.FC = () => {
+interface MenuListProps {
+  items: {
+    label: string;
+  }[]
+}
+
+export const MenuList: React.FC<MenuListProps> = ({ items }) => {
   return (
     <S.MenuListBase>
       <S.Decoration>
         <Decoration />
       </S.Decoration>
       <S.MenuList>
-        <MenuListItem>Save</MenuListItem>
-        <MenuListItem>Load</MenuListItem>
-        <MenuListItem>Settings</MenuListItem>
-        <MenuListItem>Controls</MenuListItem>
-        <MenuListItem>Network</MenuListItem>
-        <MenuListItem>Play Records</MenuListItem>
-        <MenuListItem>Return to Title Screen</MenuListItem>
+        {items.map(({ label }, index) => (
+          <MenuListItem key={index}>{label}</MenuListItem>
+        ))}
       </S.MenuList>
     </S.MenuListBase>
   );

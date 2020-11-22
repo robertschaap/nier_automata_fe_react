@@ -2,11 +2,9 @@ import styled from 'styled-components';
 
 export const MenuListBase = styled.div`
   display: flex;
-  height: 100%;
 `;
 
 export const Decoration = styled.div`
-  height: 100%;
   margin-right: 35px;
 `;
 
@@ -29,7 +27,10 @@ export const MenuListItemFillBar = styled.div`
 export const MenuListItem = styled.li`
   height: 48px;
   position: relative;
-  margin-bottom: 28px;
+
+  &:not(:last-of-type) {
+    margin-bottom: 28px;
+  }
 
   &:hover,
   &:focus {
@@ -86,6 +87,7 @@ export const MenuListItemLabel = styled.div`
   height: 100%;
   display: flex;
   align-items: center;
+  letter-spacing: 2px;
 `;
 
 export const MenuListItemIcon = styled.i`
