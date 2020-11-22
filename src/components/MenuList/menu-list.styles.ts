@@ -85,6 +85,7 @@ export const MenuListItemLabel = styled.div`
   position: absolute;
   z-index: 1;
   height: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
   letter-spacing: 2px;
@@ -96,4 +97,12 @@ export const MenuListItemIcon = styled.i`
   display: inline-block;
   background-color: currentColor;
   margin: 0 8px;
+`;
+
+export const MenuListItemText = styled.span`
+  flex: auto;
+`;
+
+export const MenuListItemInfo = styled.span`
+  margin-right: 8px;
 `;
