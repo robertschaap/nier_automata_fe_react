@@ -1,6 +1,17 @@
 import styled from 'styled-components';
 
-export const MenuListBase = styled.ul`
+export const MenuListBase = styled.div`
+  display: flex;
+  height: 100%;
+`;
+
+export const Decoration = styled.div`
+  height: 100%;
+  margin-right: 35px;
+`;
+
+export const MenuList = styled.ul`
+  flex: auto;
   margin: 0;
   padding-left: 0;
   list-style-type: none;
