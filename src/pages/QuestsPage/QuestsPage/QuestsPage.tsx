@@ -15,10 +15,7 @@ export const QuestsPage: React.FC = () => {
   return (
     <S.Main>
       <MenuList items={items} />
-      <section></section>
-      <section>
-        <StatusPanel />
-      </section>
+      <StatusPanel />
     </S.Main>
   );
 };
