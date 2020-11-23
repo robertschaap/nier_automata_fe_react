@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const MenuListBase = styled.section`
-  width: 573px;
+  width: 571px;
 `;
 
 export const MenuListWrapper = styled.div`
