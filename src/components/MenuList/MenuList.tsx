@@ -4,12 +4,15 @@ import * as S from './menu-list.styles';
 
 import { Decoration } from 'components/Decoration';
 
+interface MenuListItem {
+  icon?: string // TODO: implement properly later and render icon in container
+  info?: string;
+  isDisabled?: boolean;
+  label: string;
+}
+
 interface MenuListProps {
-  items: {
-    icon?: string;
-    info?: string;
-    label: string;
-  }[]
+  items: MenuListItem[];
 }
 
 export const MenuList: React.FC<MenuListProps> = ({ items }) => {
@@ -20,12 +23,8 @@ export const MenuList: React.FC<MenuListProps> = ({ items }) => {
           <Decoration />
         </S.Decoration>
         <S.MenuList>
-          {items.map(({ icon, info, label }, index) => (
-            <MenuListItem
-              key={index}
-              icon={icon}
-              info={info}
-              label={label}>
+          {items.map((item, index) => (
+            <MenuListItem key={index} {...item}>
             </MenuListItem>
           ))}
         </S.MenuList>
@@ -34,15 +33,9 @@ export const MenuList: React.FC<MenuListProps> = ({ items }) => {
   );
 };
 
-interface MenuListItemProps {
-  icon?: string // TODO: implement properly later and render icon in container
-  info?: string;
-  label: string;
-}
-
-const MenuListItem: React.FC<MenuListItemProps> = ({ icon, info, label }) => {
+const MenuListItem: React.FC<MenuListItem> = ({ icon, info, isDisabled, label }) => {
   return (
-    <S.MenuListItem>
+    <S.MenuListItem isDisabled={isDisabled}>
       <S.MenuListItemBackground />
       <S.MenuListItemFillBar />
       <S.MenuListItemLabel>

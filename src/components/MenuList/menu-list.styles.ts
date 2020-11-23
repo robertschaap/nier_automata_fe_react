@@ -28,9 +28,10 @@ export const MenuListItemFillBar = styled.div`
   background-color: ${({ theme }) => theme.color.darkest};
 `;
 
-export const MenuListItem = styled.li`
+export const MenuListItem = styled.li<{ isDisabled?: boolean }>`
   height: 48px;
   position: relative;
+  opacity: ${({ isDisabled }) => isDisabled && 0.5};
 
   &:not(:last-of-type) {
     margin-bottom: 28px;
