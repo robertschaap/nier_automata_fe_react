@@ -1,43 +1,30 @@
 import React from 'react';
-import styled from 'styled-components';
 
 import { Map } from '../Map';
 
-const Main = styled.main`
-  display: flex;
-  flex: auto;
-  margin: 50px;
-  margin-top: 35px;
+import * as S from './map-page.styles';
 
-  > div:first-child {
-    flex: 1 1 0;
-    background-color: #eee;
-  }
+import { Main } from 'components/Main';
+import { MenuList } from 'components/MenuList';
 
-  > div {
-    flex: 2 2 0;
-    background-color: #eee;
-  }
-`;
+const items = [
+  { label: 'Quick Save', isDisabled: true },
+  { label: 'Map Mode' },
+  { label: 'Map Icons' },
+];
 
 export const MapPage: React.FC = () => {
   return (
-    <Main>
-      <div>
-        <ul>
-          <li>Quick Save</li>
-          <li>Map Mode</li>
-          <li>Map Icons</li>
-        </ul>
+    <Main spacing="space-between">
+      <S.MenuWrapper>
+        <MenuList items={items} />
         <div>
-          <div>City Ruins</div>
-          <div>MIA</div>
-          <div>Use your scanner to find surviving YoRHa</div>
+          <S.CurrentLocation>City Ruins</S.CurrentLocation>
+          <S.ActiveMission>MIA</S.ActiveMission>
+          <S.ActiveMissionDescription>Use your scanner to find surviving YoRHa</S.ActiveMissionDescription>
         </div>
-      </div>
-      <div>
-        <Map />
-      </div>
+      </S.MenuWrapper>
+      <Map />
     </Main>
   );
 };
