@@ -17,7 +17,7 @@ export const MapPage: React.FC = () => {
   return (
     <Main spacing="space-between">
       <S.MenuWrapper>
-        <MenuList items={items} />
+        <MenuList isTopAligned items={items} />
         <div>
           <S.CurrentLocation>City Ruins</S.CurrentLocation>
           <S.ActiveMission>MIA</S.ActiveMission>
