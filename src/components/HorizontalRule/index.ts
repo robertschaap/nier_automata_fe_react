@@ -1,1 +1,1 @@
-export { HorizontalRule } from './horizontal-rule.styles';
+export { HorizontalRule } from './HorizontalRule';
