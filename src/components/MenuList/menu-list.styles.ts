@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
-export const MenuListBase = styled.section`
+export const MenuListBase = styled.section<{ isTopAligned?: boolean }>`
+  display: flex;
+  flex-direction: column;
+  justify-content: ${({ isTopAligned }) => !isTopAligned && 'center'};
   width: 571px;
 `;
 

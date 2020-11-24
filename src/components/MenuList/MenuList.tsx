@@ -12,12 +12,13 @@ interface MenuListItem {
 }
 
 interface MenuListProps {
+  isTopAligned?: boolean;
   items: MenuListItem[];
 }
 
-export const MenuList: React.FC<MenuListProps> = ({ items }) => {
+export const MenuList: React.FC<MenuListProps> = ({ isTopAligned, items }) => {
   return (
-    <S.MenuListBase>
+    <S.MenuListBase isTopAligned={isTopAligned}>
       <S.MenuListWrapper>
         <S.Decoration>
           <Decoration />
