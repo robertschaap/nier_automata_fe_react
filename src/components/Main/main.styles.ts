@@ -9,5 +9,5 @@ export const Main = styled.main<MainProps>`
   display: flex;
   margin: 88px 50px 58px;
 
-  ${({ spacing }) => spacing === 'space-between' ? 'justify-content: space-between;' : ''};
+  ${({ spacing }) => spacing === 'space-between' && 'justify-content: space-between;'};
 `;
