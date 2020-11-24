@@ -1,9 +1,23 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const slideIn = keyframes`
+  from {
+    opacity: 0;
+    padding-top: 20px;
+  }
+
+  to {
+    opacity: 1;
+    padding-top: 0px;
+  }
+`;
 
 export const InfoPanelWrapper = styled.div`
   height: 100px;
+  animation: 400ms ease-out ${slideIn};
 `;
 
+// TODO: figure out what the proper background colors, =maybe darkest with 0.5 alpha
 export const InfoPanel = styled.div`
   display: flex;
   align-items: center;
