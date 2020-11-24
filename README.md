@@ -7,3 +7,7 @@ Weapons - selecting all weapons generates list, list has info panel. Weapon sets
 Skills - just lists of chips that highlight the ones selected on the column. The column could be a flexbox thing by just using `flex: n`.
 Intel - just lists and nested views
 System - just lists and nested views, most with the slimmer header
+
+Todo:
+* Navitems, transition state moving from active to focused
+* Navitem and menulist, onblur transition for the fill is different from onfocus, might be different if item is initially focused
