@@ -11,7 +11,7 @@ export const StatusPanel: React.FC = () => {
         <S.Hr />
         <S.Item><span>Funds (G):</span><span>1,238,657</span></S.Item>
         <S.Item><span>EXP:</span><span>626,978</span></S.Item>
-        <S.Item><span>HP: ===--</span><span>5,765 / 7,765</span></S.Item>
+        <S.Item><span>HP: <S.HealthBar healthPercentage={90} /></span><span>5,765 / 7,765</span></S.Item>
         <S.Hr />
         <S.Item><span>Attack (Light):</span><span>5,953 + 1,191</span></S.Item>
         <S.Item><span>Attack (Heavy):</span><span>6,523 + 1,305</span></S.Item>

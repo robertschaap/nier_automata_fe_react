@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const StatusPanelBase = styled.section`
   display: flex;
@@ -31,6 +31,17 @@ export const Hr = styled.hr`
   height: 3px;
   border: none;
   background-color: ${({ theme }) => theme.color.normal};
+`;
+
+export const HealthBar = styled.span<{ healthPercentage: number }>`
+  display: inline-block;
+  width: 182px;
+  height: 12px;
+
+  ${({ theme, healthPercentage }) => css`
+    background: linear-gradient(90deg, ${theme.color.normal} ${healthPercentage}%, ${theme.color.dark} ${healthPercentage}%);
+  `}
+
 `;
 
 export const Ailments = styled(Item)`
