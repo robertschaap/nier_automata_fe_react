@@ -19,7 +19,7 @@ const items = [
 export const SystemPageContainer: React.FC = () => {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
-      <Header title="System" showNavigation={false} />
+      <Header title="System" />
       <Main spacing="space-between">
         <MenuList items={items} />
         <StatusPanel />
