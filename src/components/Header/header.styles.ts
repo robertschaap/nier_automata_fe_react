@@ -122,7 +122,7 @@ export const NavItem = styled(Link)`
 
   &:before,
   &:after {
-    content: "";
+    content: '';
     width: 100%;
     height: 3px;
     background-color: ${({ theme }) => theme.color.darkest};
