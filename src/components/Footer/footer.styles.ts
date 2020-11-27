@@ -21,20 +21,31 @@ export const InfoPanelWrapper = styled.div`
 export const InfoPanel = styled.div`
   display: flex;
   align-items: center;
+  position: relative;
   margin: 0 50px;
   height: 80px;
   background-color: ${({ theme }) => theme.color.lightest};
   box-shadow: 3px 3px ${({ theme }) => theme.color.normal};
   letter-spacing: 2px;
-`;
 
-export const Label = styled.div`
-  flex: auto;
+  &:after {
+    content: '';
+    width: 17px;
+    height: 17px;
+    background-color: ${({ theme }) => theme.color.darkest};
+    position: absolute;
+    bottom: 7px;
+    right: 12px;
+  }
 `;
 
 export const Decoration = styled.div`
   height: 100%;
   margin-right: 35px;
+`;
+
+export const Label = styled.div`
+  flex: auto;
 `;
 
 export const Buttons = styled.div`
