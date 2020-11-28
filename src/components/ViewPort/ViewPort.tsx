@@ -8,6 +8,8 @@ interface ViewPortProps {
 
 export const ViewPort: React.FC<ViewPortProps> = ({ children }) => {
   return (
-    <S.ViewPortComponent>{children}</S.ViewPortComponent>
+    <S.ViewPortBase>
+      {children}
+    </S.ViewPortBase>
   );
 };
