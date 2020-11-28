@@ -18,13 +18,13 @@ const items = [
 
 export const SystemPageContainer: React.FC = () => {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+    <>
       <Header title="System" />
       <Main spacing="space-between">
         <MenuList items={items} />
         <StatusPanel />
       </Main>
       <Footer text="Load game, save game, or change system settings." />
-    </div>
+    </>
   );
 };

@@ -9,10 +9,10 @@ import { Header } from 'components/Header';
 // the Main component inside(?) MapPage acts and on what Footer needs
 export const MapPageContainer: React.FC = () => {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+    <>
       <Header title="Map" />
       <MapPage />
       <Footer text="View the map or perform a quick-save." />
-    </div>
+    </>
   );
 };

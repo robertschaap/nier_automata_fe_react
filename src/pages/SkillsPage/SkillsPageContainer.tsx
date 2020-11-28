@@ -13,13 +13,13 @@ const items = [
 
 export const SkillsPageContainer: React.FC = () => {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+    <>
       <Header title="Skills" />
       <Main spacing="space-between">
         <MenuList items={items} />
         <StatusPanel />
       </Main>
       <Footer text="Assign special abilities." />
-    </div>
+    </>
   );
 };

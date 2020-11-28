@@ -14,13 +14,13 @@ const items = [
 
 export const WeaponsPageContainer: React.FC = () => {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+    <>
       <Header title="Weapons" />
       <Main spacing="space-between">
         <MenuList items={items} />
         <StatusPanel />
       </Main>
       <Footer text="Change equipped weapons" />
-    </div>
+    </>
   );
 };

@@ -18,13 +18,13 @@ const items = [
 
 export const ItemsPageContainer: React.FC = () => {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+    <>
       <Header title="Items" />
       <Main spacing="space-between">
         <MenuList items={items} />
         <StatusPanel />
       </Main>
       <Footer text="View or use items in your inventory." />
-    </div>
+    </>
   );
 };
