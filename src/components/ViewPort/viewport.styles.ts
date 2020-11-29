@@ -8,6 +8,7 @@ export const ViewPortBase = styled.div`
 `;
 
 export const Background = styled.div`
+  color: ${({ theme }) => theme.color.normal};
   background-color: ${({ theme }) => theme.color.light};
   position: absolute;
   top: 0;
@@ -16,21 +17,26 @@ export const Background = styled.div`
   bottom: 0;
 `;
 
-const upperLeft = css`
+const lowerRight = (offsetX = 0, offsetY = 0) => css`
   bottom: 0;
   right: 0;
-  transform: translate3d(50%, 50%, 0);
+  transform: translate3d(${offsetX}%, ${offsetY}%, 0);
 `;
 
-const lowerRight = css`
+const upperLeft = (offsetX = 0, offsetY = 0) => css`
   top: 0;
   left: 0;
-  transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(${offsetX}%, ${offsetY}%, 0);
 `;
 
 export const BackgroundCircle = styled.div<{ bottom?: boolean }>`
   position: absolute;
-  ${({ bottom }) => bottom ? upperLeft : lowerRight};
+  ${({ bottom }) => bottom ? lowerRight(50, 50) : upperLeft(-50, -50)};
+`;
+
+export const BackgroundLine = styled.div<{ bottom?: boolean, offsetX?: number, offsetY?: number}>`
+  position: absolute;
+  ${({ bottom, offsetX, offsetY }) => bottom ? lowerRight(offsetX, offsetY) : upperLeft(offsetX, offsetY)}
 `;
 
 export const Layout = styled.div`
