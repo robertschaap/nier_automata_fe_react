@@ -1,9 +1,15 @@
 import React from 'react';
 
-export const BackgroundCircle: React.FC = () => {
+import * as S from './background-circle.styles';
+
+interface BackgroundCircleProps {
+  size: number;
+}
+
+export const BackgroundCircle: React.FC<BackgroundCircleProps> = ({ size = 500 }) => {
   return (
-    <svg width="1181" height="1181">
-      <circle stroke="#000" strokeWidth="3" cx="590.5" cy="590.5" r="588.5" fill="none" fillRule="evenodd"/>
+    <svg width={size} height={size}>
+      <S.Circle />
     </svg>
   );
 };
