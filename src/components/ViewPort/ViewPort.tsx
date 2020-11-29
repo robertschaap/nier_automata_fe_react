@@ -40,13 +40,14 @@ export const ViewPort: React.FC<ViewPortProps> = ({ children }) => {
         <S.BackgroundLine bottom>
           <BackgroundLine />
         </S.BackgroundLine>
-        <S.BackgroundLine bottom offsetX={24} offsetY={14}>
+        <S.BackgroundLine bottom offsetX={23} offsetY={15}>
           <BackgroundLine />
         </S.BackgroundLine>
       </S.Background>
       <S.Layout>
         {children}
       </S.Layout>
+      <S.Foreground />
     </S.ViewPortBase>
   );
 };
