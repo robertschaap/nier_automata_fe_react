@@ -11,7 +11,7 @@ const expand = keyframes`
 `;
 
 export const Circle = styled.circle`
-  stroke: ${({ theme }) => theme.color.normal};
+  stroke: currentColor;
   fill: none;
   fill-rule: evenodd;
   stroke-width: 3;
