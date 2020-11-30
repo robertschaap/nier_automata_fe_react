@@ -5,7 +5,6 @@ export const ItemPanelBase = styled.section`
   flex-direction: column;
   width: 535px;
   background-color: ${({ theme }) => theme.color.lightest};
-  letter-spacing: 2px;
 `;
 
 export const Header = styled.div`

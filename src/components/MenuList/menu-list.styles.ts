@@ -96,7 +96,6 @@ export const MenuListItemLabel = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  letter-spacing: 2px;
 `;
 
 export const MenuListItemIcon = styled.i`

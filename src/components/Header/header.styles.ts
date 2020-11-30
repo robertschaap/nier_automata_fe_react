@@ -166,15 +166,12 @@ export const H1 = styled.h1`
   text-shadow: 6px 6px ${({ theme }) => theme.color.normal};
 `;
 
-export const SubTitle = styled.span`
-  letter-spacing: 2px;
-`;
+export const SubTitle = styled.span``;
 
 export const Storage = styled.div`
   background-color: ${({ theme }) => theme.color.lightest};
   border-left: 10px solid ${({ theme }) => theme.color.darkest};
   padding: 8px 16px;
-  letter-spacing: 2px;
   justify-self: flex-end;
   width: 535px;
   margin-left: auto;

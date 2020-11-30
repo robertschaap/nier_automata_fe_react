@@ -26,7 +26,6 @@ export const InfoPanel = styled.div`
   height: 80px;
   background-color: ${({ theme }) => theme.color.lightest};
   box-shadow: 3px 3px ${({ theme }) => theme.utils.toRgba(theme.color.dark, 0.5)};
-  letter-spacing: 2px;
 
   &:after {
     content: '';

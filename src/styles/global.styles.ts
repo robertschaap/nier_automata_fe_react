@@ -10,6 +10,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     font-family: 'Lato', sans-serif;
     font-size: 22px;
+    letter-spacing: 2px;
     color: ${theme.color.darkest};
   }
 
