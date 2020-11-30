@@ -3,8 +3,6 @@ import '../styles/normalize.css';
 import React from 'react';
 import { Route, Router } from 'react-router-dom';
 
-import { history } from '../utils/history';
-
 import { ThemeProviderContainer } from './ThemeProviderContainer';
 
 import { ViewPort } from 'components/ViewPort';
@@ -16,6 +14,7 @@ import { QuestsPage } from 'pages/QuestsPage';
 import { SkillsPage } from 'pages/SkillsPage';
 import { SystemPage } from 'pages/System';
 import { WeaponsPage } from 'pages/WeaponsPage';
+import { history } from 'utils/history';
 
 export const RootContainer: React.FC = () => {
   return (
