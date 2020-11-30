@@ -23,9 +23,11 @@ interface HeaderProps {
   showTitle?: boolean;
   subTitle?: string;
   title: string;
+  // TODO: pass proper object later
+  storage?: number;
 }
 
-export const Header: React.FC<HeaderProps> = ({ showNavigation = true, showTitle = true, subTitle, title }) => {
+export const Header: React.FC<HeaderProps> = ({ showNavigation = true, showTitle = true, subTitle, storage, title }) => {
   const [activeRoute, setActiveRoute] = useState<BaseRoutesType | null>(null);
   const history = useHistory();
 
@@ -65,6 +67,7 @@ export const Header: React.FC<HeaderProps> = ({ showNavigation = true, showTitle
         <S.Title>
           <S.H1>{title}</S.H1>
           {subTitle && <S.SubTitle>- {subTitle}</S.SubTitle>}
+          {storage && <S.Storage>Storage Used : 119 / 128</S.Storage>}
         </S.Title>
       )}
     </header>
