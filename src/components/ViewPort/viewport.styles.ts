@@ -59,8 +59,8 @@ export const ForegroundRadial = styled.div`
   bottom: 0;
   z-index: 1;
   background-image: url(${block});
-  background: radial-gradient(transparent 0%, ${({ theme }) => theme.color.darkest} 130%);
-  opacity: 0.2;
+  background: radial-gradient(transparent 50%, ${({ theme }) => theme.color.darkest} 150%);
+  opacity: 0.5;
   pointer-events: none;
 `;
 
