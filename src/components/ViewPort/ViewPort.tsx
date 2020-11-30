@@ -47,7 +47,8 @@ export const ViewPort: React.FC<ViewPortProps> = ({ children }) => {
       <S.Layout>
         {children}
       </S.Layout>
-      <S.Foreground />
+      <S.ForegroundRadial />
+      <S.ForegroundOverlay />
     </S.ViewPortBase>
   );
 };

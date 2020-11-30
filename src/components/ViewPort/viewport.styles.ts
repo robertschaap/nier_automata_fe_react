@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import block from './background-block.svg';
+
 export const ViewPortBase = styled.div`
   width: ${({ theme }) => theme.aspectRatio.width}px;
   height: ${({ theme }) => theme.aspectRatio.height}px;
@@ -49,13 +51,27 @@ export const Layout = styled.div`
   bottom: 0;
 `;
 
-export const Foreground = styled.div`
+export const ForegroundRadial = styled.div`
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   z-index: 1;
-  background: radial-gradient(transparent -11%, ${({ theme }) => theme.color.darkest} 300%);
+  background-image: url(${block});
+  background: radial-gradient(transparent 0%, ${({ theme }) => theme.color.darkest} 130%);
+  opacity: 0.2;
   pointer-events: none;
+`;
+
+export const ForegroundOverlay = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-image: url(${block});
+  pointer-events: none;
+  opacity: 0.1;
 `;
