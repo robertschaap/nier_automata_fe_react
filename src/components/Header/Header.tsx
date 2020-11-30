@@ -21,10 +21,11 @@ const navItems = [
 interface HeaderProps {
   showNavigation?: boolean;
   showTitle?: boolean;
+  subTitle?: string;
   title: string;
 }
 
-export const Header: React.FC<HeaderProps> = ({ showNavigation = true, showTitle = true, title }) => {
+export const Header: React.FC<HeaderProps> = ({ showNavigation = true, showTitle = true, subTitle, title }) => {
   const [activeRoute, setActiveRoute] = useState<BaseRoutesType | null>(null);
   const history = useHistory();
 
@@ -61,7 +62,10 @@ export const Header: React.FC<HeaderProps> = ({ showNavigation = true, showTitle
       )}
       <HorizontalRule />
       {showTitle && (
-        <S.H1>{title}</S.H1>
+        <S.Title>
+          <S.H1>{title}</S.H1>
+          {subTitle && <S.SubTitle>- {subTitle}</S.SubTitle>}
+        </S.Title>
       )}
     </header>
   );

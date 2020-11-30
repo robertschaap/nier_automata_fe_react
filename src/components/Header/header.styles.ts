@@ -151,12 +151,21 @@ export const NavItem = styled(Link)`
   }
 `;
 
+export const Title = styled.div`
+  padding: 0 50px;
+  display: flex;
+  align-items: baseline;
+`;
+
 export const H1 = styled.h1`
   text-transform: uppercase;
   letter-spacing: 16px;
   font-size: 50px;
   font-weight: 400;
   margin: 0;
-  padding: 0 50px;
   text-shadow: 6px 6px ${({ theme }) => theme.color.normal};
+`;
+
+export const SubTitle = styled.span`
+  letter-spacing: 2px;
 `;
