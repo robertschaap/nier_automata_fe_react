@@ -1,0 +1,1 @@
+export { WriteText } from './WriteText';
