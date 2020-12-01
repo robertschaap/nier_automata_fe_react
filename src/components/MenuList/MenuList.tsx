@@ -3,6 +3,7 @@ import React from 'react';
 import * as S from './menu-list.styles';
 
 import { Decoration } from 'components/Decoration';
+import { WriteText } from 'components/WriteText';
 
 interface MenuListItem {
   icon?: string // TODO: implement properly later and render icon in container
@@ -41,7 +42,9 @@ const MenuListItem: React.FC<MenuListItem> = ({ icon, info, isDisabled, label })
       <S.MenuListItemFillBar />
       <S.MenuListItemLabel>
         {icon ?? <S.MenuListItemIcon />}
-        <S.MenuListItemText>{label}</S.MenuListItemText>
+        <S.MenuListItemText>
+          <WriteText text={label} />
+        </S.MenuListItemText>
         {info && <S.MenuListItemInfo>{info}</S.MenuListItemInfo>}
       </S.MenuListItemLabel>
     </S.MenuListItem>
