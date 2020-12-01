@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 export const MenuListBase = styled.section<{ isTopAligned?: boolean }>`
   display: flex;
@@ -11,8 +11,24 @@ export const MenuListWrapper = styled.div`
   display: flex;
 `;
 
+const expand = keyframes`
+  from {
+    height: 0%
+  }
+
+  to {
+    height: 100%;
+  }
+`;
+
 export const Decoration = styled.div`
   margin-right: 35px;
+  display: flex;
+  align-items: center;
+
+  svg {
+    animation: 200ms ease-out ${expand};
+  }
 `;
 
 export const MenuList = styled.ul`
