@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-import block from './background-block.svg';
+import block from '../../assets/background-block.svg';
 
 export const ViewPortBase = styled.div`
   width: ${({ theme }) => theme.aspectRatio.width}px;
