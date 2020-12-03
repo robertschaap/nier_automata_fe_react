@@ -67,7 +67,7 @@ export const Header: React.FC<HeaderProps> = ({ showNavigation = true, showTitle
       {showTitle && (
         <S.Title>
           <S.H1><WriteText text={title} /></S.H1>
-          {subTitle && <S.SubTitle>- {subTitle}</S.SubTitle>}
+          {subTitle && <span>- {subTitle}</span>}
           {storage && <S.Storage>Storage Used : 119 / 128</S.Storage>}
         </S.Title>
       )}

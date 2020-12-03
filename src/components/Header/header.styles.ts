@@ -166,8 +166,6 @@ export const H1 = styled.h1`
   text-shadow: 6px 6px ${({ theme }) => theme.color.normal};
 `;
 
-export const SubTitle = styled.span``;
-
 export const Storage = styled.div`
   background-color: ${({ theme }) => theme.color.lightest};
   border-left: 10px solid ${({ theme }) => theme.color.darkest};
