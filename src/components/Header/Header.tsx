@@ -5,7 +5,6 @@ import * as S from './header.styles';
 
 import { Decoration } from 'components/Decoration';
 import { HorizontalRule } from 'components/HorizontalRule';
-import { PageHeader } from 'components/PageHeader';
 import { BaseRoutesType, baseRoutes } from 'constants/routes';
 
 const navItems = [
@@ -21,14 +20,9 @@ const navItems = [
 // TODO: flags here are just temp, probably context+hook this since nested pages will need access
 interface HeaderProps {
   showNavigation?: boolean;
-  showTitle?: boolean;
-  subTitle?: string;
-  title: string;
-  // TODO: pass proper object later
-  storage?: number;
 }
 
-export const Header: React.FC<HeaderProps> = ({ showNavigation = true, showTitle = true, subTitle, storage, title }) => {
+export const Header: React.FC<HeaderProps> = ({ showNavigation = true }) => {
   const [activeRoute, setActiveRoute] = useState<BaseRoutesType | null>(null);
   const history = useHistory();
 
@@ -64,12 +58,6 @@ export const Header: React.FC<HeaderProps> = ({ showNavigation = true, showTitle
         </S.Navigation>
       )}
       <HorizontalRule />
-      {showTitle && (
-        <PageHeader
-          storage={storage}
-          subTitle={subTitle}
-          title={title} />
-      )}
     </header>
   );
 };
