@@ -27,7 +27,7 @@ export const Header: React.FC<HeaderProps> = ({ showNavigation = true }) => {
   const history = useHistory();
 
   const onRouteChange = useCallback((route: BaseRoutesType) => () => {
-    activeRoute !== route && history.push(route);
+    history.push(route);
   }, []);
 
   const onSetActiveRoute = (route: BaseRoutesType) => () => {
