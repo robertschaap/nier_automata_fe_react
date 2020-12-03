@@ -35,7 +35,7 @@ export const NavItemBase = styled.li<{ isActive?: boolean }>`
 
 // TODO: revisit once router works properly with header, it is barely
 // visible when loading.
-const slideDown = keyframes`
+const fadeOut = keyframes`
   from {
     opacity: 1;
   }
@@ -57,7 +57,7 @@ export const NavItemActive = styled.div`
     background-color: ${({ theme }) => theme.color.darkest};
     position: absolute;
     pointer-events: none;
-    animation: 100ms ease-out ${slideDown};
+    animation: 100ms ease-out ${fadeOut};
     z-index: 0;
     top: -6px;
     opacity: 0;
@@ -91,7 +91,7 @@ export const NavItemBackground = styled.div`
   background-color: ${({ theme }) => theme.color.normal};
 `;
 
-export const NavItemFillBar = styled.div`
+export const NavItemFillBar = styled.div<{ a?: boolean }>`
   position: absolute;
   z-index: 1;
   width: 0%;
