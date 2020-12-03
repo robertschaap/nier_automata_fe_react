@@ -4,6 +4,7 @@ import { Footer } from 'components/Footer';
 import { Header } from 'components/Header';
 import { Main } from 'components/Main';
 import { MenuList } from 'components/MenuList';
+import { PageHeader } from 'components/PageHeader';
 import { StatusPanel } from 'components/StatusPanel';
 
 const items = [
@@ -14,7 +15,8 @@ const items = [
 export const SkillsPageContainer: React.FC = () => {
   return (
     <>
-      <Header title="Skills" />
+      <Header showTitle={false} title="Skills" />
+      <PageHeader title="Skills" />
       <Main spacing="space-between">
         <MenuList items={items} />
         <StatusPanel />
