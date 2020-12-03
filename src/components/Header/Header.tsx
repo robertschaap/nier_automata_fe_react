@@ -5,7 +5,7 @@ import * as S from './header.styles';
 
 import { Decoration } from 'components/Decoration';
 import { HorizontalRule } from 'components/HorizontalRule';
-import { WriteText } from 'components/WriteText';
+import { PageHeader } from 'components/PageHeader';
 import { BaseRoutesType, baseRoutes } from 'constants/routes';
 
 const navItems = [
@@ -65,11 +65,10 @@ export const Header: React.FC<HeaderProps> = ({ showNavigation = true, showTitle
       )}
       <HorizontalRule />
       {showTitle && (
-        <S.Title>
-          <S.H1><WriteText text={title} /></S.H1>
-          {subTitle && <span>- {subTitle}</span>}
-          {storage && <S.Storage>Storage Used : 119 / 128</S.Storage>}
-        </S.Title>
+        <PageHeader
+          storage={storage}
+          subTitle={subTitle}
+          title={title} />
       )}
     </header>
   );
