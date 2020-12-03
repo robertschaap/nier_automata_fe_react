@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { Footer } from 'components/Footer';
-import { Header } from 'components/Header';
 import { Main } from 'components/Main';
 import { MenuList } from 'components/MenuList';
 import { PageHeader } from 'components/PageHeader';
@@ -16,7 +15,6 @@ const items = [
 export const WeaponsPageContainer: React.FC = () => {
   return (
     <>
-      <Header showTitle={false} title="Weapons" />
       <PageHeader title="Weapons" />
       <Main spacing="space-between">
         <MenuList items={items} />

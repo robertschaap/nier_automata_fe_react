@@ -5,6 +5,7 @@ import { Route, Router } from 'react-router-dom';
 
 import { ThemeProviderContainer } from './ThemeProviderContainer';
 
+import { Header } from 'components/Header';
 import { ViewPort } from 'components/ViewPort';
 import { baseRoutes } from 'constants/routes';
 import { IntelPage } from 'pages/IntelPage';
@@ -21,6 +22,7 @@ export const RootContainer: React.FC = () => {
     <Router history={history}>
       <ThemeProviderContainer>
         <ViewPort>
+          <Header />
           <Route exact path="/" component={MapPage} />
           <Route path={baseRoutes.MAP_PAGE} component={MapPage} />
           <Route path={baseRoutes.QUESTS_PAGE} component={QuestsPage} />
