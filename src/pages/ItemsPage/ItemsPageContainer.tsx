@@ -2,8 +2,10 @@ import React from 'react';
 
 import { Footer } from 'components/Footer';
 import { Header } from 'components/Header';
+import { ItemPanel } from 'components/ItemPanel';
 import { Main } from 'components/Main';
 import { MenuList } from 'components/MenuList';
+import { PageHeader } from 'components/PageHeader';
 import { StatusPanel } from 'components/StatusPanel';
 
 const items = [
@@ -19,9 +21,11 @@ const items = [
 export const ItemsPageContainer: React.FC = () => {
   return (
     <>
-      <Header title="Items" />
+      <Header showTitle={false} title="Items" />
+      <PageHeader title="Items" />
       <Main spacing="space-between">
         <MenuList items={items} />
+        <ItemPanel />
         <StatusPanel />
       </Main>
       <Footer text="View or use items in your inventory." />
