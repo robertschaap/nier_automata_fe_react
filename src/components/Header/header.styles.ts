@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { DefaultTheme, keyframes } from 'styled-components';
 
 import { Link } from 'components/Link';
 
@@ -25,12 +25,24 @@ export const NavItems = styled.ul`
   justify-content: space-between;
 `;
 
+const pulsate = (theme: DefaultTheme) => keyframes`
+  from {
+    background-color: ${theme.color.darkest};
+  }
+
+  to {
+    background-color: ${theme.color.dark};
+  }
+`;
+
 export const NavItemBase = styled.li<{ isActive?: boolean }>`
   width: 215px;
   height: ${({ isActive }) => isActive ? '70px' : itemHeight};
   transition: height 100ms ease-out;
   background-color: ${({ theme }) => theme.color.darkest};
   color: ${({ theme }) => theme.color.lightest};
+
+  animation: 1000ms linear infinite alternate ${({ theme }) => pulsate(theme)};
 `;
 
 // TODO: revisit once router works properly with header, it is barely
