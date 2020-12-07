@@ -108,7 +108,7 @@ export const NavItemFillBar = styled.div<{ a?: boolean }>`
   z-index: 1;
   width: 0%;
   height: 100%;
-  transition: width 100ms ease-out;
+  transition: width 200ms ease-out;
   background-color: ${({ theme }) => theme.color.darkest};
   pointer-events: none;
 `;
