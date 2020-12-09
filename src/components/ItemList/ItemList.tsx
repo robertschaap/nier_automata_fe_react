@@ -1,0 +1,36 @@
+import React from 'react';
+
+import * as S from './item-list.styles';
+
+export const ItemList: React.FC = () => {
+  return (
+    <S.ItemListBase>
+      <S.ItemList>
+        <ItemListItem label="Small Recovery" />
+        <ItemListItem label="Medium Recovery" />
+        <ItemListItem label="Large Recovery" />
+        <ItemListItem label="Full Recovery" />
+        <ItemListItem label="Visual Cure" />
+        <ItemListItem label="Aural Cure" />
+        <ItemListItem label="Cure Manipulation" />
+        <ItemListItem label="Cure All Status" />
+        <ItemListItem label="Cure All + Heal All" />
+      </S.ItemList>
+    </S.ItemListBase>
+  );
+};
+
+interface ItemListItemProps {
+  label: string;
+}
+
+const ItemListItem: React.FC<ItemListItemProps> = ({ label }) => {
+  return (
+    <S.ItemListItem>
+      <S.ItemListItemFillBar />
+      <S.ItemListItemLabel>
+        {label}
+      </S.ItemListItemLabel>
+    </S.ItemListItem>
+  );
+};
