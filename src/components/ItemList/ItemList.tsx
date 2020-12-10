@@ -27,9 +27,12 @@ interface ItemListItemProps {
 const ItemListItem: React.FC<ItemListItemProps> = ({ label }) => {
   return (
     <S.ItemListItem>
+      <S.ItemListBackground />
       <S.ItemListItemFillBar />
       <S.ItemListItemLabel>
-        {label}
+        <S.ItemListItemIcon />
+        <S.ItemListItemText>{label}</S.ItemListItemText>
+        <S.ItemListItemInfo>95</S.ItemListItemInfo>
       </S.ItemListItemLabel>
     </S.ItemListItem>
   );
