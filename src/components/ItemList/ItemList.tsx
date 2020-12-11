@@ -5,6 +5,7 @@ import * as S from './item-list.styles';
 export const ItemList: React.FC = () => {
   return (
     <S.ItemListBase>
+      <S.ItemListDecoration />
       <S.ItemList>
         <ItemListItem label="Small Recovery" />
         <ItemListItem label="Medium Recovery" />
@@ -16,6 +17,7 @@ export const ItemList: React.FC = () => {
         <ItemListItem label="Cure All Status" />
         <ItemListItem label="Cure All + Heal All" />
       </S.ItemList>
+      <S.ItemListDecoration />
     </S.ItemListBase>
   );
 };

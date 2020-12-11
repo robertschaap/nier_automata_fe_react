@@ -8,11 +8,23 @@ export const ItemListBase = styled.section`
   box-shadow: 3px 3px ${({ theme }) => theme.utils.toRgba(theme.color.dark, 0.5)};
 `;
 
+export const ItemListDecoration = styled.hr`
+  margin-top: 7px;
+  margin-bottom: 7px;
+  margin-left: 12px;
+  height: 3px;
+  width: ${461 - 12}px;
+  border: none;
+  background-color: ${({ theme }) => theme.color.normal};
+`;
+
 export const ItemList = styled.ul`
   margin: 0;
+  margin-top: 7px;
   padding-left: 0;
   list-style-type: none;
   width: 461px;
+  flex: auto;
 `;
 
 export const ItemListItemFillBar = styled.div`
