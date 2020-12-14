@@ -7,7 +7,7 @@ interface MainProps {
 export const Main = styled.main<MainProps>`
   flex: auto;
   display: flex;
-  margin: 88px 50px 58px;
+  margin: 48px 50px 58px;
 
   ${({ spacing }) => spacing === 'space-between' && 'justify-content: space-between;'};
 `;
