@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const PageHeaderBase = styled.div`
   padding: 0 50px;
   display: flex;
-  align-items: baseline;
+  align-items: flex-end;
 `;
 
 export const H1 = styled.h1`
@@ -12,10 +12,13 @@ export const H1 = styled.h1`
   font-size: 50px;
   font-weight: 400;
   margin: 0;
+  margin-bottom: 22px;
   text-shadow: 6px 6px ${({ theme }) => theme.color.normal};
 `;
 
-export const SubTitle = styled.span``;
+export const SubTitle = styled.span`
+  margin-bottom: 22px;
+`;
 
 export const Storage = styled.div`
   background-color: ${({ theme }) => theme.color.lightest};
