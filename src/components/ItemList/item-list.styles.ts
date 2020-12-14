@@ -2,8 +2,16 @@ import styled from 'styled-components';
 
 export const ItemListBase = styled.section`
   display: flex;
+`;
+
+export const Decoration = styled.div`
+  margin-right: 42px;
+`;
+
+export const ItemListWrapper = styled.div`
+  width: 507px;
+  display: flex;
   flex-direction: column;
-  width: 506px;
   background-color: ${({ theme }) => theme.color.lightest};
   box-shadow: 3px 3px ${({ theme }) => theme.utils.toRgba(theme.color.dark, 0.5)};
 `;
