@@ -14,7 +14,10 @@ const items = [
 export const SkillsPageContainer: React.FC = () => {
   return (
     <>
-      <PageHeader title="Skills" />
+      <PageHeader
+        storage={{ available: 128, used: 119 }}
+        subTitle="Plug-in Chips"
+        title="Skills" />
       <Main spacing="space-between">
         <MenuList items={items} />
         <StatusPanel />
