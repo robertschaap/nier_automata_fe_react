@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { ChipBar } from 'components/ChipBar';
 import { Footer } from 'components/Footer';
 import { Main } from 'components/Main';
 import { MenuList } from 'components/MenuList';
@@ -20,6 +21,7 @@ export const SkillsPageContainer: React.FC = () => {
         title="Skills" />
       <Main spacing="space-between">
         <MenuList items={items} />
+        <ChipBar />
         <StatusPanel />
       </Main>
       <Footer text="Assign special abilities." />
