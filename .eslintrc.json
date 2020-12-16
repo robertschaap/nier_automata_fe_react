@@ -54,6 +54,7 @@
     }],
 
     // Workaround for potential conflict with legacy config
-    "no-use-before-define": "off"
+    "no-use-before-define": "off",
+    "no-shadow": "off"
   }
 }
