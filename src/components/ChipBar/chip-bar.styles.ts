@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import type { ChipTypes } from './ChipBar';
+
 export const ChipContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -8,12 +10,20 @@ export const ChipContainer = styled.div`
   height: 100%;
 `;
 
-export const Chip = styled.div<{ isSelected?: boolean; storage: number }>`
-  background-color: yellow;
+const ChipColors: { [k in ChipTypes]: string } = {
+  SYSTEM: '#89806e',
+  ATTACK: '#b69e86',
+  DEFENSE: '#beb29a',
+  SUPPORT: '#e6ddb4',
+  HACKING: '#ffffff',
+};
+
+export const Chip = styled.div<{ isSelected?: boolean; storage: number; chipType: ChipTypes }>`
+  background-color: ${({ chipType }) => ChipColors[chipType]};
   flex: ${({ storage }) => storage};
   width: ${({ isSelected }) => isSelected ? 288 : 240}px;
   position: relative;
-  border-bottom: 3px solid yellow;
+  border-bottom: 3px solid ${({ chipType }) => ChipColors[chipType]};
 
   &:after {
     content: '';
