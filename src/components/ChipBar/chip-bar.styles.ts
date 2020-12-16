@@ -8,9 +8,9 @@ export const ChipContainer = styled.div`
   height: 100%;
 `;
 
-export const Chip = styled.div<{ isSelected?: boolean; storageConsumed: number }>`
+export const Chip = styled.div<{ isSelected?: boolean; storage: number }>`
   background-color: yellow;
-  flex: ${({ storageConsumed }) => storageConsumed};
+  flex: ${({ storage }) => storage};
   width: ${({ isSelected }) => isSelected ? 288 : 240}px;
   position: relative;
   border-bottom: 3px solid yellow;
@@ -26,8 +26,8 @@ export const Chip = styled.div<{ isSelected?: boolean; storageConsumed: number }
   }
 `;
 
-export const AvailableStorage = styled.div<{ storageAvailable: number }>`
+export const AvailableStorage = styled.div<{ storage: number }>`
   background-color: ${({ theme }) => theme.color.dark};
   width: 240px;
-  flex: ${({ storageAvailable }) => storageAvailable};
+  flex: ${({ storage }) => storage};
 `;
