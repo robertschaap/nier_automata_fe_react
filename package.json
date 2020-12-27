@@ -16,7 +16,7 @@
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
-    "@snowpack/app-scripts-react": "^1.12.5",
+    "@snowpack/app-scripts-react": "^1.12.6",
     "@types/jest": "^26.0.16",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
