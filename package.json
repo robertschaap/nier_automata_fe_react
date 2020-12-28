@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "@snowpack/app-scripts-react": "^1.12.6",
-    "@types/jest": "^26.0.16",
+    "@types/jest": "^26.0.19",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@types/react-router-dom": "^5.1.6",
