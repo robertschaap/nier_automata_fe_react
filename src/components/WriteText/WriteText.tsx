@@ -27,12 +27,12 @@ export const WriteText: React.FC<{ text: string }> = React.memo(({ text }) => {
     let timer: number;
 
     if (writtenText.length > 1) {
-      timer = setTimeout(() => {
+      timer = window.setTimeout(() => {
         setWrittenText(writtenText.splice(1));
       }, 15);
     }
 
-    return () => clearTimeout(timer);
+    return () => window.clearTimeout(timer);
   }, [writtenText]);
 
   return (
