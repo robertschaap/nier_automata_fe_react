@@ -6,7 +6,7 @@ interface BackgroundCircleProps {
   size: number;
 }
 
-export const BackgroundCircle: React.FC<BackgroundCircleProps> = ({ size = 500 }) => {
+export const BackgroundCircle: React.FC<BackgroundCircleProps> = ({ size }) => {
   return (
     <svg width={size} height={size}>
       <S.Circle />
